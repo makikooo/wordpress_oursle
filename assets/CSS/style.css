@@ -15,7 +15,9 @@ body {
 a {
   color: #462401;
 }
-
+.bold {
+    font-weight: bold;
+}
 
 .container {
   max-width: 100%;
