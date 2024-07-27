@@ -1096,7 +1096,7 @@ textarea {
 /* アンケート */
 .questionnaire {
     text-align: center;
-    margin-bottom: 50px;
+    margin: 0 auto 50px;
 }
 
 /*
@@ -2366,4 +2366,10 @@ skinのCSS
     margin: 0 auto 100px;
     border: #462401 2px solid;
     border-radius: 20px;
+}
+
+ /* アンケート */
+.questionnaire iframe {
+    display: block;
+    margin: 0 auto;
 }
