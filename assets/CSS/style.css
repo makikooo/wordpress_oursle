@@ -3,6 +3,7 @@
 body {
   background: #FDFCFC;
   color: #462401;
+  font-size: 16px;
   font-family: fot-tsukuardgothic-std, tbudrgothic-std, 'Open Sans';
 }
 
@@ -18,7 +19,10 @@ a {
 .bold {
     font-weight: bold;
 }
-
+.underline {
+    padding-bottom: 4px;
+    border-bottom: 1px solid #462401;
+}
 .container {
   max-width: 100%;
   margin: 0 auto;
@@ -121,7 +125,10 @@ a {
 /*==矢印の設定*/
 
 /*2階層目を持つliの矢印の設定*/
-.has-child {
+.hild {
+
+}
+.has-child{
   position: relative;
 }
 .has-child::before{
@@ -1098,6 +1105,15 @@ textarea {
     text-align: center;
     margin: 0 auto 50px;
 }
+@media(width < 769px) {
+    .questionnaire {
+        margin-top: 345px;
+    }
+    .questionnaire iframe {
+        width: 90%;
+        height: 300px;
+    }
+}
 
 /*
 フッター
@@ -1495,6 +1511,13 @@ input[type="checkbox"].on-off:checked + ul{
   width: 900px;
   max-width: 90%;
   margin: 0 auto;
+}
+@media (width < 769px){
+    .syoujou {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+    }
 }
 .syoujou_img {
   margin-bottom: 30px;
@@ -2152,16 +2175,18 @@ skinのCSS
   margin: 0 auto;
 }
 .kensa_table {
-  font-size: 19px;
+  font-size: 16px;
 }
 .kensa_table,
 .kensa_table_left,
+.kensa_table_center,
 .kensa_setumei,
 .koumoku {
   border: 1px solid #000;
 }
 .kensa_table_left,
 .koumoku,
+.kensa_table_center,
 .kensa_setumei {
   padding: 2%;
 }
@@ -2203,9 +2228,6 @@ skinのCSS
   padding: 2% 0 8%;
 }
 @media screen and (max-width:808px){
-  .kensa_table {
-    font-size: 16px;
-  }
   .kensa_table,
   .kensa_table tbody,
   .kensa_table td {
@@ -2235,7 +2257,7 @@ skinのCSS
     width: 200px;
   }
   .kensa_setumei {
-       padding-left: 4em;
+       padding-left: 1em;
        text-align: left;
        margin-bottom: 25px;
        padding-top: 0;
@@ -2372,4 +2394,368 @@ skinのCSS
 .questionnaire iframe {
     display: block;
     margin: 0 auto;
+}
+
+/* 特定疾患受給者票の診断ページ */
+#sindan {
+    font-size: clamp(1rem, 0.909rem + 0.45vw, 1.25rem);
+}
+.head_title {
+    text-align: left;
+    color: #9E7975;
+    margin: 50px auto 70px;
+    font-size: clamp(1.125rem, 1.016rem + 0.48vw, 1.375rem);
+    line-height: 140%;
+}
+.sindan_wrapper {
+    border: 10px solid #E1998B;
+    margin: 0 auto 70px;
+    text-align: left;
+    padding: 25px 40px 35px;
+}
+
+@media (width < 769px) {
+    .sindan_wrapper {
+        padding: 2% 4% 5%;
+        border: 3px solid #E1998B;
+    }
+}
+@media (width < 527px) {
+    .sindan_wrapper {
+        padding: 2% 4% 5%;
+    }
+}
+.section_title {
+    border-radius: 25px;
+    width: 100%;
+    text-align: left;
+    background-color: #E1998B;
+    color: #fff;
+    font-size: clamp(1.063rem, 0.926rem + 0.6vw, 1.375rem);
+    margin: 15px auto 20px;
+    padding: 1rem 2rem;
+}
+@media (width < 960px){
+    .section_title {
+        height: auto;
+        padding: 0.2em 2em;
+        line-height: 140%;
+    }
+}
+.section_sub_title {
+    text-align: center;
+    font-size: clamp(1.031rem, 0.963rem + 0.3vw, 1.188rem);
+}
+.what_iryouhijosei {
+    width: 90%;
+    max-width: 810px;
+    margin: 0 auto 20px;
+}
+.wrap {
+    width: 100%;
+    overflow: hidden;
+}
+
+.schedule {
+    margin:50px 0;
+    padding:0 50px;
+    width: 100vw;
+    height: auto;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.schedule::-webkit-scrollbar {  
+    display:none;
+}
+
+.schedule--scroll {
+    width: 900px;
+    margin-bottom: 40px;
+}
+@media (width < 796px){
+    .schedule--scroll {
+        width: 550px;
+    }
+}
+
+.schedule--scroll img {
+    width: 600px;
+    height: auto;
+    object-fit: contain;
+}
+@media (width < 769px) {
+    .schedule--scroll img {
+        width: 500px;
+    }
+}
+
+.sindan_image {
+    width: 90%;
+    display: block;
+    margin: 0 auto 50px;
+}
+
+.text_aline_left {
+    text-align: left;
+}
+.sindan_houhou_list {
+    width: 90%;
+    max-width: 780px;
+    margin: 30px auto 20px;
+}
+.sinndan_houhou_item:last-child {
+    margin-bottom: 50px;
+}
+.sindan_houhou_item_title {
+    font-size: clamp(1rem, 0.945rem + 0.24vw, 1.125rem); 
+}
+.sindan_houhou_item_text {
+    font-size: clamp(0.875rem, 0.82rem + 0.24vw, 1rem);
+    margin-left: 2em;
+}
+.about_score_wrapper {
+    width: 155px;
+    height: 40px;
+    border-radius: 20px;
+    background-color: #E1B2A9;
+    text-align: center;
+    line-height: 40px;
+}
+
+.about_score_text {
+    margin-left: 2em;
+    margin-bottom: 30px;
+}
+.about_score_text:last-child {
+    margin-bottom: 0px;
+}
+.rinsyokensakojinhyou {
+    
+}
+.bold_impact {
+    font-weight: bold;
+    padding-left: 1em;
+    border-left: solid 10px #9E7975;
+}
+.category_wrapper {
+    margin: 0 auto 30px;
+    background-color: #FFF8F0;
+    border: 1px solid #9E7975;
+    padding: 10px 5%;
+}
+@media (width < 769px) {
+    .category_wrapper {
+        padding: 10px;
+    }
+}
+.flex_center {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+@media (width < 796px) {
+    .flex_center {
+        flex-direction: column;
+        gap: 0px;
+    }
+}
+.abc {
+    font-size: clamp(2.5rem, 1.955rem + 2.73vw, 4rem);
+    font-family: "Montserrat", sans-serif;
+    display: inline-block;
+    margin: 0;
+}
+/* @media (width < 796px){
+    .abc {
+        margin-bottom: 64px;
+    }
+} */
+.hissu {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-color: #E1B2A9;
+    text-align: center;
+    line-height: 70px;
+}
+
+.category_title {
+    font-weight: bold;
+}
+.category_table {
+    width: 96%;
+    margin: 0 auto 80px;
+}
+@media (width < 794px){
+    .category_table,
+    .category_table tr,
+    .category_table tr th,
+    .category_table tr td {
+        display: table;
+        text-align: left;
+    }
+    .category_table tr th {
+        margin-left: 0.5em;
+        margin-bottom: 0;
+    }
+    .category_table tr td {
+        margin-left: 1em;
+    }
+}
+.category_table tr th {
+    width: 90px;
+    height: 25px;
+    line-height: 25px;
+}
+.category_atention {
+    background-color: #fff;
+    border: 10px solid #9a5952;
+    padding: 5%;
+    margin-bottom: 70px;
+}
+@media (width < 796px) {
+    .category_atention {
+        border: none;
+        padding: 20px;
+    }
+}
+.category_atention_title {
+    font-weight: bold;
+    text-align: center;
+    font-size: clamp(1.156rem, 1.115rem + 0.18vw, 1.25rem);
+    margin: 0;
+}
+.category_atention_text {
+    line-height: 140%;
+}
+.category_table tr th {
+    width: 150px;
+}
+
+/*==================================================
+アコーディオンのためのcss
+===================================*/
+
+/*アコーディオン全体*/
+#sindan .accordion-area{
+    list-style: none;
+    width: 96%;
+    max-width: 900px;
+    margin:0 auto;
+}
+
+#sindan .accordion-area li{
+    margin: 50px 0;
+}
+
+#sindan .accordion-area section {
+  /* border: 1px solid #ccc; */
+}
+
+/*アコーディオンタイトル*/
+#sindan .title {
+    position: relative;/*+マークの位置基準とするためrelative指定*/
+    cursor: pointer;
+    font-weight: normal;
+    padding: 3% 3% 3% 50px;
+    transition: all .5s ease;
+}
+
+/*アイコンの＋と×*/
+#sindan .title::before,
+#sindan .title::after{
+    position: absolute;
+    content:'';
+    width: 15px;
+    height: 2px;
+    background-color: #fff;
+    
+}
+#sindan .title::before{
+    top:48%;
+    left: 15px;
+    transform: rotate(0deg);
+    
+}
+#sindan .title::after{    
+    top:48%;
+    left: 15px;
+    transform: rotate(90deg);
+
+}
+
+/*　closeというクラスがついたら形状変化　*/
+
+#sindan .title.close::before{
+  transform: rotate(45deg);
+}
+
+#sindan .title.close::after{
+  transform: rotate(-45deg);
+}
+
+/*アコーディオンで現れるエリア*/
+#sindan .box {
+    display: none;/*はじめは非表示*/
+    margin:0 3% 3% 3%;
+    padding: 3%;
+}
+
+
+#sindan accordion-area {
+  list-style: none;
+  width: 96%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+#sindan .accordion-area li {
+  margin: 10px 0;
+}
+
+#sindan .title {
+  position: relative;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: normal;
+  padding: 3% 3% 3% 50px;
+  transition: all .5s ease;
+}
+
+#sindan .title::before,
+#sindan .title::after {
+  position: absolute;
+  content: '';
+  width: 15px;
+  height: 2px;
+  background-color: #333;
+}
+
+#sindan .title::before {
+  top: 48%;
+  left: 15px;
+  transform: rotate(0deg);
+}
+
+#sindan .title::after {    
+  top: 48%;
+  left: 15px;
+  transform: rotate(90deg);
+}
+
+#sindan .title.close::before {
+  transform: rotate(45deg);
+}
+
+#sindan .title.close::after {
+  transform: rotate(-45deg);
+}
+
+#sindan .box {
+  display: none;
+  margin: 0 3% 3% 3%;
+  padding: 3%;
 }
