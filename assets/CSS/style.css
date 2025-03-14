@@ -1100,21 +1100,6 @@ textarea {
   font-size: 20px;
 }
 
-/* アンケート */
-.questionnaire {
-    text-align: center;
-    margin: 0 auto 50px;
-}
-@media(width < 769px) {
-    .questionnaire {
-        margin-top: 345px;
-    }
-    .questionnaire iframe {
-        width: 90%;
-        height: 300px;
-    }
-}
-
 /*
 フッター
 */
