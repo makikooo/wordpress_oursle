@@ -1279,13 +1279,13 @@ textarea {
 
     .hero-img {
         margin-top: 55px;
-        margin-bottom: 250px;
+        margin-bottom: 99px;
         width: 100vw;
         height: auto;
     }
 
     .pink {
-        height: 100vh;
+        height: auto;
     }
 
     .future {
@@ -1293,7 +1293,7 @@ textarea {
     }
 
     .future-title {
-        padding-top: 260px;
+        padding-top: 20px;
     }
 
     .future-text {
@@ -1305,6 +1305,7 @@ textarea {
 
     .tell {
         height: 1500px;
+        margin-bottom: 100px;
     }
 
     .tell-box {
@@ -1920,13 +1921,12 @@ skinのCSS
 .slide {
     animation-name: slide;
     animation-duration: 50s;
-    animation-timing-function: ease;
     animation-iteration-count: infinite;
 }
 
 @media (width <=768px) {
     .slide {
-        margin-top: 200px;
+        margin-top: 310px;
     }
 }
 
@@ -3051,7 +3051,7 @@ skinのCSS
 }
 
 #enquete .BGwhite {
-    width: 90%;
+    width: 95%;
     max-width: 900px;
     margin: 20px auto;
     text-align: left;
@@ -3072,12 +3072,18 @@ skinのCSS
     margin-bottom: 40px;
 }
 
+@media (width < 768px) {
+    .enquete_result_wrapper {
+        padding: 10px 5px;
+    }
+}
+
 .enquete_title {
-    font-size: 1.5rem;
+    font-size: 1.25rem;
 }
 
 .enquete_subtitle {
-    font-size: 1.25rem;
+    font-size: 1.175rem;
 }
 
 /* 
@@ -3101,4 +3107,5 @@ skinのCSS
 .result_item {
     margin-left: 2em;
     margin-bottom: 8px;
+    list-style-type: circle;
 }
