@@ -1304,8 +1304,8 @@ textarea {
     }
 
     .tell {
-        height: 1500px;
-        margin-bottom: 100px;
+        /* height: 1500px; */
+        margin-bottom: 20px;
     }
 
     .tell-box {
@@ -1919,6 +1919,7 @@ skinのCSS
 }
 
 .slide {
+    overflow: hidden;
     animation-name: slide;
     animation-duration: 50s;
     animation-iteration-count: infinite;
@@ -1926,7 +1927,7 @@ skinのCSS
 
 @media (width <=768px) {
     .slide {
-        margin-top: 310px;
+        margin-top: 24px;
     }
 }
 
