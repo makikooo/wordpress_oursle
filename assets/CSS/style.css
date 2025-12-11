@@ -1920,16 +1920,19 @@ aboutMedicineのCSS
     border: 3px solid #9e7975;
     background-color: #fff1f0;
     color: #9e7975;
+    margin-bottom: -5px;
+}
+
+.tyouseizai {
+    height: 50px;
+    margin-bottom: 40px;
 }
 
 .yokuseizai_title {
     font-size: 23px;
-    margin-right: 15px;
     display: inline-block;
-}
-
-.tyouseizai {
-    margin-top: 60px;
+    margin-right: 0;
+    margin-left: auto;
 }
 
 /* 薬紹介の共通 */
@@ -1971,6 +1974,12 @@ aboutMedicineのCSS
 .medicine_kind {
     margin: 0;
     font-size: 15px;
+}
+
+.sle_medicine {
+    font-size: 13px;
+    margin: 0;
+    font-weight: 700;
 }
 
 .medicine_text_box {
