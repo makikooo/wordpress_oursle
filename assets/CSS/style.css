@@ -3142,6 +3142,10 @@ skinのCSS
 社会的寛解ページ
 ===================================*/
 #kankai {
+    .tyuui_wrapper {
+        height: 60px;
+    }
+
     .kankai_content {
         max-width: 780px;
         width: 80%;
