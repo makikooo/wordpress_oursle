@@ -2074,6 +2074,30 @@ skinのCSS
     }
 }
 
+/*===================================
+プラケニルのスタイル
+===================================*/
+#plaquenil_wrapper {
+    font-size: 1.1rem;
+
+    #sikumi {
+        .sikumi_table {
+            text-align: left;
+
+            .sikumi_th {
+                font-size: 1.25rem;
+                display: block;
+            }
+
+            .sikumi_td {
+                display: block;
+                margin-bottom: 20px;
+
+            }
+        }
+    }
+}
+
 /* 
 薬のページの共通点
 */
@@ -2081,6 +2105,7 @@ skinのCSS
     line-height: 1.6;
 }
 
+.sikumi_wrapper,
 .medicine_width,
 .kouka_wrapper,
 .fukusayo_wrapper {
@@ -2102,7 +2127,6 @@ skinのCSS
 
 .medicine_name_box {
     width: 88%;
-    height: 77px;
     padding: 15px;
     border: 6px solid #9E7975;
     border-radius: 33px;
