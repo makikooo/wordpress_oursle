@@ -20,8 +20,17 @@ a {
 }
 
 .bold {
-    font-weight: bold;
+    font-weight: 600;
 }
+
+.highlighter {
+    text-decoration: underline;
+    text-decoration-thickness: 0.3em;
+    text-decoration-color: rgb(238, 130, 189, 0.5);
+    text-underline-offset: -0.2em;
+    text-decoration-skip-ink: none;
+}
+
 
 .underline {
     padding-bottom: 4px;
@@ -1485,18 +1494,6 @@ textarea {
     width: 100%;
 }
 
-.bold {
-    font-weight: 600;
-}
-
-.highlighter {
-    text-decoration: underline;
-    text-decoration-thickness: 0.3em;
-    text-decoration-color: rgb(238, 130, 189, 0.5);
-    text-underline-offset: -0.2em;
-    text-decoration-skip-ink: none;
-
-}
 
 .follow {
     padding-top: 10px;
