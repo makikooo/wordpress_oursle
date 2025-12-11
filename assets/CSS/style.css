@@ -31,6 +31,9 @@ a {
     text-decoration-skip-ink: none;
 }
 
+.green {
+    background-color: #b4d2b0;
+}
 
 .underline {
     padding-bottom: 4px;
@@ -533,6 +536,7 @@ li {
     margin: 0;
 }
 
+
 /*
 キャッチコピー 
 */
@@ -602,9 +606,10 @@ li {
 */
 .information_box {
     padding: 20px;
-    width: 480px;
+    max-width: 520px;
+    width: 90%;
     height: auto;
-    margin: 0 auto;
+    margin: 0 auto 90px;
     text-align: left;
     border: #E1B2A9 solid 3px;
     border-radius: 25px;
@@ -612,9 +617,57 @@ li {
 
 .information-title {
     text-align: center;
-    font-size: 18px;
+    font-size: 1.5rem;
     margin: 0 0 15px;
     color: #9e7975;
+}
+
+.information_table {
+    width: 100%;
+    table-layout: fixed;
+
+    tr {
+        margin: 0;
+
+        .info_date {
+            width: 120px;
+            font-weight: normal;
+            line-height: 1.4;
+
+            a {
+                display: block;
+            }
+        }
+
+        .info_message {
+            line-height: 1.4;
+
+            a {
+                display: block;
+                /* 長い文字もちゃんと折り返す */
+                white-space: normal;
+                overflow-wrap: anywhere;
+            }
+        }
+    }
+}
+
+@media (width < 768px) {
+    .information_table {
+        tr {
+            display: flex;
+            flex-direction: column;
+        }
+
+        td,
+        th {
+            display: block;
+        }
+
+        td {
+            margin-bottom: 15px;
+        }
+    }
 }
 
 .informatiln_link {
@@ -632,6 +685,36 @@ li {
     .information_box {
         width: 90%;
     }
+}
+
+/* SLEとはのキャッチコピー */
+.subtitle_wrapper {
+    width: 80%;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.subtitle_title {
+    font-size: 1.5rem;
+    margin-top: 0;
+}
+
+.subtitle_sle_text {
+    max-width: 400px;
+    width: 90%;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.to_aboutsle_link {
+    padding: 8px;
+    margin: 20px auto 0;
+    display: inline-block;
+    width: 300px;
+    background-color: #e1f3e6;
+    border: #000 solid 2px;
+    border-radius: 20px;
+
 }
 
 /* 
@@ -656,14 +739,14 @@ li {
 .to_kankai_link {
     display: block;
     padding: 5px;
-    background-color: #e4d0cd;
+    background-color: #fbe5e1;
     border: #000 solid 2px;
     border-radius: 20px;
 }
 
 .tell {
     text-align: center;
-    padding: 10% 15px;
+    padding: 5% 15px 10%;
 }
 
 .tell-img {
@@ -1151,6 +1234,7 @@ li {
 /*===================================
 つらさフォームのためのcss
 ===================================*/
+/* 
 .center h3,
 .center p {
     text-align: center;
@@ -1168,13 +1252,12 @@ li {
     margin-bottom: 94px;
 }
 
-/* 
+
 table {
   display: flex;
   align-items: center;
   justify-content: center;
-} */
-
+} 
 tr {
     text-align: left;
     margin-bottom: 65px;
@@ -1210,6 +1293,8 @@ textarea {
     color: #462401;
     font-size: 20px;
 }
+
+*/
 
 /*
 フッター
@@ -1376,7 +1461,7 @@ textarea {
         width: 90%;
     }
 
-    table,
+    /* table,
     table tbody,
     th,
     tr,
@@ -1397,7 +1482,7 @@ textarea {
 
     td {
         text-align: center;
-    }
+    } */
 
     .link_title {
         margin-top: 30px;
