@@ -46,6 +46,14 @@ a {
     border-radius: 10px;
 }
 
+.mb20 {
+    margin-bottom: 20px;
+}
+
+.mb50 {
+    margin-bottom: 50px;
+}
+
 .container {
     max-width: 100%;
     margin: 0 auto;
