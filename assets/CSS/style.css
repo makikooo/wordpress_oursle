@@ -1744,6 +1744,13 @@ input[type="checkbox"].on-off:checked+ul {
     }
 }
 
+.symptoms {
+    max-width: 700px;
+    width: 90%;
+    margin: 20px auto 30px;
+    text-align: left;
+}
+
 .syoujou_img {
     margin-bottom: 30px;
 }
@@ -2212,6 +2219,7 @@ skinのCSS
     max-width: 900px;
     width: 90%;
     margin: 0 auto;
+    height: 40px;
 }
 
 #SLE_tiryou ul {
