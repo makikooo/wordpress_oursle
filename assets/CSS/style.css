@@ -3116,14 +3116,14 @@ skinのCSS
 ===================================*/
 #kankai {
     .kankai_content {
-        max-width: 980px;
+        max-width: 780px;
         width: 80%;
         margin: 0 auto;
-        font-size: 1.25rem;
+        font-size: 1.5rem;
 
         .kankai_text {
             text-align: left;
-            font-size: 1.1rem;
+            font-size: 1.25rem;
         }
 
         .references {
