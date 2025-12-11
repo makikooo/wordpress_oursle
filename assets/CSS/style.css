@@ -3110,3 +3110,36 @@ skinのCSS
     margin-bottom: 8px;
     list-style-type: circle;
 }
+
+/*==================================
+社会的寛解ページ
+===================================*/
+#kankai {
+    .kankai_content {
+        max-width: 980px;
+        width: 80%;
+        margin: 0 auto;
+        font-size: 1.25rem;
+
+        .kankai_text {
+            text-align: left;
+            font-size: 1.1rem;
+        }
+
+        .references {
+            text-align: left;
+            padding-left: 20px;
+            border-left: 3px solid #777;
+            margin-bottom: 50px;
+
+            h2.references_title {
+                font-size: 16px;
+                margin-bottom: -10px;
+            }
+
+            .references_item {
+                font-size: 14px;
+            }
+        }
+    }
+}
