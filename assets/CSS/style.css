@@ -1923,6 +1923,13 @@ aboutMedicineのCSS
     margin-bottom: -5px;
 }
 
+.overview {
+    text-align: left;
+    max-width: 440px;
+    width: 90%;
+    margin: 0 auto 20px;
+}
+
 .tyouseizai {
     height: 50px;
     margin-bottom: 40px;
