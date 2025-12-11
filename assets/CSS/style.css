@@ -1920,7 +1920,9 @@ aboutMedicineのCSS
     border: 3px solid #9e7975;
     background-color: #fff1f0;
     color: #9e7975;
-    margin-bottom: -5px;
+    margin-bottom: 40px;
+    margin-top: 20px;
+    border-radius: 15px;
 }
 
 .overview {
@@ -1948,6 +1950,10 @@ aboutMedicineのCSS
     grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 2%;
     margin-bottom: 25px;
+}
+
+.skin_medicine {
+    margin-top: 100px;
 }
 
 .medicine {
