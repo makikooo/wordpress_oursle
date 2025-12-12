@@ -3342,5 +3342,13 @@ skinのCSS
                 font-size: 14px;
             }
         }
+
+        .kankai_subtitle {
+            text-align: left;
+        }
+
+        .kankai_sub_text {
+            font-size: 16px;
+        }
     }
 }
