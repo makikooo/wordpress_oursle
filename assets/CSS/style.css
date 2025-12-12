@@ -1956,6 +1956,12 @@ aboutMedicineのCSS
     margin: -20px auto 30px;
 }
 
+.bio_text {
+    text-align: left;
+    width: 90%;
+    margin: -20px auto 30px;
+}
+
 /* 薬紹介の共通 */
 .am_grid {
     display: grid;
