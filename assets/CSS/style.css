@@ -1950,6 +1950,12 @@ aboutMedicineのCSS
     margin-left: auto;
 }
 
+.yokuseizai_text {
+    width: 90%;
+    text-align: left;
+    margin: -20px auto 30px;
+}
+
 /* 薬紹介の共通 */
 .am_grid {
     display: grid;
