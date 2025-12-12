@@ -1908,6 +1908,17 @@ aboutMedicineのCSS
     width: 100%;
     margin: 0 auto;
     padding: 0;
+
+    .overview {
+        text-align: left;
+        max-width: 500px;
+        width: 90%;
+        margin: 0 auto 20px;
+
+        h3 {
+            text-align: center;
+        }
+    }
 }
 
 .am_subtitle {
@@ -1925,12 +1936,7 @@ aboutMedicineのCSS
     border-radius: 15px;
 }
 
-.overview {
-    text-align: left;
-    max-width: 440px;
-    width: 90%;
-    margin: 0 auto 20px;
-}
+
 
 .tyouseizai {
     height: 50px;
