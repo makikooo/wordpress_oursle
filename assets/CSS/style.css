@@ -2285,6 +2285,10 @@ aboutMedicineのCSS
         height: 150px;
     }
 
+    .medicine_kind{
+      font-size: 14px;
+      font-weight: 700;
+    }
     .medicine_center {
       height: initial;
     }

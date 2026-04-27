@@ -64,8 +64,8 @@
                 <a href="<?php echo esc_url( home_url('/steroid/') ); ?>">
                     <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/predonizoron.webp" alt="プレドニゾロンの写真" class="medicine_img">
                     <div class="medicine_center">
-                        <p class="medicine_kind">ステロイド<br><span class="bold">成分名）グルココルチコイド</span></p>
-                        <p>代表となる薬<br><span class="medicine_name">プレドニゾロン</span></p>
+                        <p class="medicine_kind">ステロイド<br><span class="bold">グルココルチコイド</span></p>
+                        <p>代表となる薬<br><span class="medicine_name">プレドニン</span><br>プレドニゾロン</p>
                     </div>
                     <div class="medicine_text_box">
                         <p class="medicine_text">一昔前までは治療の中心となる薬でした。今はできるだけ少ない量・短期間にしようとしています。しかし現在でも急な悪化を抑える時にも使われます。</p>
@@ -78,7 +78,7 @@
                     <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/rokisopurofen.webp" alt="ロキソプロフェンの写真" class="medicine_img">
                     <div class="medicine_center">
                         <p class="medicine_kind">非ステロイド性抗炎症薬</p>
-                        <p>代表となる薬<br><span class="medicine_name">ロキソプロフェン</span></p>
+                        <p>代表となる薬<br><span class="medicine_name">ロキソニン</span><br>ロキソプロフェン</p>
                     </div>
                     <div class="medicine_text_box">
                         <p class="medicine_text">痛みや熱、炎症を抑える薬です。関節の痛みや発熱など、SLEの症状を和らげるために使われることがあります。ただし腎臓への負担になることがあるため、使い方には注意が必要です。</p>
@@ -99,7 +99,7 @@
                     <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/purakenil.webp" alt="プラケニルの写真" class="medicine_img">
                     <div class="medicine_center">
                         <p class="sle_medicine">SLEの代表となる薬</p>
-                        <p>成分名）ヒドロキシクロロキン<br><span class="medicine_name">プラケニル</span></p>
+                        <p><span class="medicine_name">プラケニル</span><br>ヒドロキシクロロキン</p>
                     </div>
                     <div class="medicine_text_box">
                         <p class="medicine_text">SLEと診断されたら最初に飲むことが多い。過剰な免疫反応を穏やかに抑え、関節痛・発疹・倦怠感などの症状を和らげ、ステロイド量を減らすことも期待できる薬です。</p>
@@ -129,7 +129,7 @@
                     <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/seruseputo.webp" alt="セルセプトの写真" class="medicine_img">
                     <div class="medicine_center">
                         <p class="medicine_kind">免疫抑制剤</p>
-                        <p>Mycophenolate mofetil<br><span class="medicine_name">セルセプト</span></p>
+                        <p><span class="medicine_name">セルセプト</span><br>ミコフェノール酸モフェチル</p>
                     </div>
                     <div class="medicine_text_box">
                         <p class="medicine_text">免疫の働きを抑えて、臓器へのダメージを防ぐ薬です。ステロイドと組み合わせて使うことが多く、ステロイドを減らす助けにもなります。妊娠中は使えないため、使用中は避妊が必要です。</p>
@@ -142,7 +142,7 @@
                     <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/purogurafu.webp" alt="プログラフの写真" class="medicine_img">
                     <div class="medicine_center">
                         <p class="medicine_kind">免疫抑制剤</p>
-                        <p>Tacrolimus<br><span class="medicine_name">プログラフ</span></p>
+                        <p><span class="medicine_name">プログラフ</span><br>タクロリムス</p>
                     </div>
                     <div class="medicine_text_box">
                         <p class="medicine_text">免疫の働きを強力に抑える薬で、主にループス腎炎の治療に使われます。効果が高い一方、腎臓や血圧への影響が出ることがあるため、定期的な血液検査が必要です。</p>
@@ -155,7 +155,7 @@
                     <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/imuran.webp" alt="イムランの写真" class="medicine_img">
                     <div class="medicine_center">
                         <p class="medicine_kind">免疫抑制剤</p>
-                        <p>Azathioprine<br><span class="medicine_name">イムラン</span></p>
+                        <p><span class="medicine_name">イムラン</span><br>アザチオプリン</p>
                     </div>
                     <div class="medicine_text_box">
                         <p class="medicine_text">免疫の働きを抑える薬で、ステロイドを減らすサポート役として使われることが多いです。効果が出るまでに時間がかかりますが、長期間にわたって病気を落ち着かせるのに役立ちます。</p>
@@ -199,7 +199,7 @@
                     <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/metotorekisato.webp" alt="メトトレキサートの写真" class="medicine_img">
                     <div class="medicine_center">
                         <p class="medicine_kind">免疫抑制剤</p>
-                        <p>Methotrexate<br><span class="medicine_name">メトトレキサート</span></p>
+                        <p><span class="medicine_name">リウマトレックス</span><br>メトトレキサート</p>
                     </div>
                     <div class="medicine_text_box">
                         <p class="medicine_text">関節リウマチ治療に用いられ、免疫の働きを抑えて炎症を鎮める薬です。関節の症状や皮膚症状に効果が期待できます。飲むのは週1回だけですが、葉酸を一緒に補うことが大切です。</p>
@@ -212,7 +212,7 @@
                     <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/satikan.webp" alt="サーティカンの写真" class="medicine_img">
                     <div class="medicine_center">
                         <p class="medicine_kind">免疫抑制剤</p>
-                        <p>（エベロリムス錠）<br><span class="medicine_name">サーティカン</span></p>
+                        <p><span class="medicine_name">サーティカン</span><br>エベロリムス</p>
                     </div>
                     <div class="medicine_text_box">
                         <p class="medicine_text">免疫の働きを抑える薬で、主にループス腎炎の治療に使われます。プログラフと似た仲間の薬ですが、腎臓への負担が比較的少ないとされ、状況に応じて使い分けられます。</p>
@@ -225,7 +225,7 @@
                     <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/neoral.webp" alt="ネオーラルの写真" class="medicine_img">
                     <div class="medicine_center">
                         <p class="medicine_kind">免疫抑制剤</p>
-                        <p><span class="medicine_name">ネオーラル</span></p>
+                        <p><span class="medicine_name">ネオーラル</span><br>シクロスポリン</p>
                     </div>
                     <div class="medicine_text_box">
                         <p class="medicine_text">免疫の働きを抑える薬で、ループス腎炎などの治療に使われます。プログラフと同じ仲間の薬です。腎臓や血圧への影響が出ることがあるため、定期的な検査が必要です。</p>
@@ -266,7 +266,7 @@
                     <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/benrista.webp" alt="ベンリスタの写真" class="medicine_img">
                     <div class="medicine_center">
                         <p class="medicine_kind">生物学的製剤</p>
-                        <p>成分名）ベリムマブ<br><span class="medicine_name">ベンリスタ</span></p>
+                        <p><span class="medicine_name">ベンリスタ</span><br>ベリムマブ</p>
                     </div>
                     <div class="medicine_text_box">
                         <p class="medicine_text">SLEの治療のために開発された薬で、異常に活発になったB細胞の働きを抑えます。注射または点滴で投与します。ステロイドを減らす助けにもなり、再発を防ぐ効果が期待できます。</p>
@@ -280,7 +280,7 @@
                     <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/tenteki.webp" alt="点滴の写真" class="medicine_img img_wrapper">
                     <div class="medicine_center">
                         <p class="medicine_kind">生物学的製剤</p>
-                        <p>成分名）アニフロルマブ<br><span class="medicine_name">サフネロー</span></p>
+                        <p><span class="medicine_name">サフネロー</span><br>アニフロルマブ</p>
                     </div>
                     <div class="medicine_text_box">
                         <p class="medicine_text">看護士さんから点滴を受けます。皮下注射の治験がされています。免疫の働きを過剰に強くしてしまう「1型インターフェロン」というたんぱく質の働きを抑える薬です。自己注射もあります。</p>
@@ -294,7 +294,7 @@
                     <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/tenteki.webp" alt="点滴の写真" class="medicine_img img_wrapper">
                     <div class="medicine_center">
                         <p class="medicine_kind">生物学的製剤</p>
-                        <p>成分名）リツキシマブ<br><span class="medicine_name">リツキサン</span></p>
+                        <p><span class="medicine_name">リツキサン</span><br>リツキシマブ</p>
                     </div>
                     <div class="medicine_text_box">
                         <p class="medicine_text">抗がん剤にも使われ厳重に管理されています。B細胞そのものを減らす力の強い薬で、ループス腎炎などに使えるようになりました。点滴で投与し、毎回入院して受ける必要があります。</p>
@@ -308,7 +308,7 @@
                     <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/akutemura.webp" alt="アクテムラの写真" class="medicine_img">
                     <div class="medicine_center">
                         <p class="medicine_kind">生物学的製剤</p>
-                        <p><span class="medicine_name">アクテムラ</span></p>
+                        <p><span class="medicine_name">アクテムラ</span><br>トシリズマブ</p>
                     </div>
                     <div class="medicine_text_box">
                         <p class="medicine_text">IL-6という炎症のスイッチを止める、生物学的製剤。ループス血管炎にも使われます。点滴（静脈）タイプもあります。関節リウマチに使われます。</p>
@@ -328,7 +328,7 @@
                     <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/rokaruto.webp" alt="ロカルトロールの写真" class="medicine_img">
                     <div class="medicine_center">
                         <p class="medicine_kind">内服薬</p>
-                        <p><span class="medicine_name">ロカルトロール</span></p>
+                        <p><span class="medicine_name">ロカルトロール</span><br>カルシトリオール</p>
                     </div>
                     <div class="medicine_text_box">
                         <p class="medicine_text">腎臓の働きが低下すると不足しがちな活性型ビタミンDを補う薬です。骨を丈夫に保つ働きがあり、長期間ステロイドを使っている場合などに処方されることがあります。</p>
@@ -343,7 +343,7 @@
                     <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/arufaro.webp" alt="アルファロールの写真" class="medicine_img">
                     <div class="medicine_center">
                         <p class="medicine_kind">内服薬</p>
-                        <p><span class="medicine_name">アルファロール</span></p>
+                        <p><span class="medicine_name">アルファロール</span><br>アルファカルシドール</p>
                     </div>
                     <div class="medicine_text_box">
                         <p class="medicine_text">骨粗しょう症の治療に広く使用される活性型ビタミンD3製剤であり、骨折のリスクを減らす効果</p>
@@ -357,7 +357,7 @@
                     <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/prosirin.webp" alt="プロサイリンの写真" class="medicine_img">
                     <div class="medicine_center">
                         <p class="medicine_kind">内服薬</p>
-                        <p><span class="medicine_name">プロサイリン</span></p>
+                        <p><span class="medicine_name">プロサイリン</span><br>ベラプロストナトリウム</p>
                     </div>
                     <div class="medicine_text_box">
                         <p class="medicine_text">血管を広げて血流をよくする薬です。手足の先が白くなったり青くなったりするレイノー現象の予防や、末端の血流改善に使われます。出血しやすい状態のときは使えません。</p>
@@ -371,7 +371,7 @@
                     <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/bonaron.webp" alt="ボナロン経口ゼリーの写真" class="medicine_img">
                     <div class="medicine_center">
                         <p class="medicine_kind">内服薬</p>
-                        <p><span class="medicine_name">ボナロン経口ゼリー</span></p>
+                        <p><span class="medicine_name">ボナロン経口ゼリー</span><br>アレンドロン酸Naゼリー</p>
                     </div>
                     <div class="medicine_text_box">
                         <p class="medicine_text">骨を壊す働きを抑えて骨を丈夫に保つ薬です。長期間ステロイドを使うと骨がもろくなりやすいため、骨粗しょう症の予防・治療に使われます。週1回、起床後すぐに水で服用します。</p>
@@ -385,7 +385,7 @@
                     <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/rebo.webp" alt="レボレードの写真" class="medicine_img">
                     <div class="medicine_center">
                         <p class="medicine_kind">内服薬</p>
-                        <p><span class="medicine_name">レボレード</span></p>
+                        <p><span class="medicine_name">レボレード</span><br>エルトロンボパグ</p>
                     </div>
                     <div class="medicine_text_box">
                         <p class="medicine_text">血小板を増やす働きを促す薬です。SLEでは血小板が減少することがあり、他の治療で効果が不十分な場合に使われます。1日1回、食事の前後2時間を空けて服用します。</p>
@@ -401,7 +401,7 @@
                     <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/arendoron.png" alt="アレンドロン酸錠の写真" class="medicine_img">
                     <div class="medicine_center">
                         <p class="medicine_kind">内服薬</p>
-                        <p><span class="medicine_name">アレンドロン酸錠</span></p>
+                        <p><span class="medicine_name">ボナロン</span><br>アレンドロン酸錠</p>
                     </div>
                     <div class="medicine_text_box">
                         <p class="medicine_text">骨を壊す働きを抑えて骨を丈夫に保つ薬です。長期間ステロイドを使うと骨がもろくなりやすいため、骨粗しょう症の予防・治療に使われます。週1回、起床後すぐに水で服用します。</p>
@@ -415,7 +415,7 @@
                     <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/minodoron.webp" alt="ミノドロンの写真" class="medicine_img">
                     <div class="medicine_center">
                         <p class="medicine_kind">内服薬</p>
-                        <p><span class="medicine_name">ミノドロン</span></p>
+                        <p><span class="medicine_name">ミノドロン</span><br>ボノテオ錠やリカルボン錠</p>
                     </div>
                     <div class="medicine_text_box">
                         <p class="medicine_text">骨を壊す働きを抑えて骨を丈夫に保つ薬です。長期間ステロイドを使うと骨がもろくなりやすいため、骨粗しょう症の予防・治療に使われます。月1回または週1回服用するタイプがあります。</p>
@@ -429,7 +429,7 @@
                     <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/risedoron.webp" alt="リセドロン酸Na錠の写真" class="medicine_img">
                     <div class="medicine_center">
                         <p class="medicine_kind">内服薬</p>
-                        <p><span class="medicine_name">リセドロン酸Na錠</span></p>
+                        <p><span class="medicine_name">リセドロン酸Na錠</span><br>アクトネルやベネット</p>
                     </div>
                     <div class="medicine_text_box">
                         <p class="medicine_text">骨を壊す働きを抑えて骨を丈夫に保つ薬です。長期間ステロイドを使うと骨がもろくなりやすいため、骨粗しょう症の予防・治療に使われます。毎日・週1回・月1回と服用タイプが選べます。</p>
@@ -443,7 +443,7 @@
                     <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/akutoneru.webp" alt="アクトネル錠の写真" class="medicine_img">
                     <div class="medicine_center">
                         <p class="medicine_kind">内服薬</p>
-                        <p><span class="medicine_name">アクトネル錠</span></p>
+                        <p><span class="medicine_name">アクトネル錠</span><br>リセドロン酸Na</p>
                     </div>
                     <div class="medicine_text_box">
                         <p class="medicine_text">骨を壊す働きを抑えて骨を丈夫に保つ薬です。長期間ステロイドを使うと骨がもろくなりやすいため、骨粗しょう症の予防・治療に使われます。毎日・週1回・月1回と服用タイプが選べます。</p>
@@ -464,7 +464,7 @@
                     <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/hirudoido.webp" alt="ヒルドイドの写真" class="medicine_img">
                     <div class="medicine_center">
                         <p class="medicine_kind">外用薬</p>
-                        <p><span class="medicine_name">ヒルドイド</span></p>
+                        <p><span class="medicine_name">ヒルドイド</span><br>ヘパリン類似物質</p>
                     </div>
                     <div class="medicine_text_box">
                         <p class="medicine_text">皮膚の保湿や血行を改善する薬です。SLEでは皮膚が乾燥しやすく、炎症や傷つきやすい状態になりやすいため、皮膚のケアとして処方されることがあります。クリームやローションなど剤形が選べます。</p>
@@ -478,7 +478,7 @@
                     <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/antebeto.webp" alt="アンテベートの写真" class="medicine_img">
                     <div class="medicine_center">
                         <p class="medicine_kind">外用薬</p>
-                        <p><span class="medicine_name">アンテベート</span></p>
+                        <p><span class="medicine_name">アンテベート</span><br>ベタメタゾン酪酸エステルプロピオン酸エステル</p>
                     </div>
                     <div class="medicine_text_box">
                         <p class="medicine_text">皮膚の炎症を抑えるステロイド外用薬です。SLEでは皮膚に赤みや発疹が出ることがあり、その症状を和らげるために使われます。強めのステロイドのため、長期間の使用には注意が必要です。</p>
@@ -505,7 +505,7 @@
                     <img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/protpic.webp" alt="プロトピックの写真" class="medicine_img">
                     <div class="medicine_center">
                         <p class="medicine_kind">外用薬</p>
-                        <p><span class="medicine_name">プロトピック</span></p>
+                        <p><span class="medicine_name">プロトピック</span><br>タクロリムス水和物軟膏</p>
                     </div>
                     <div class="medicine_text_box">
                         <p class="medicine_text">ステロイドとは異なる成分で皮膚の炎症を抑える塗り薬です。顔や首など皮膚の薄い部分にも使いやすく、SLEの皮膚症状である赤みや発疹の治療に使われることがあります。</p>
