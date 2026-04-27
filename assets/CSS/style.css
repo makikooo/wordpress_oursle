@@ -2217,8 +2217,7 @@ aboutMedicineのCSS
 .medicine_center {
     background-color: #E2B2A9;
     padding: 10px;
-    height: 120px;
-    flex-grow: 1;
+    height: 162px;
 }
 
 .medicine_kind {
