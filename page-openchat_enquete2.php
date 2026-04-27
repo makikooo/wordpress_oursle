@@ -1,0 +1,587 @@
+<?php get_header(); ?>
+<!-- Main -->
+<main class="enquete_archive">
+    <section class="BGwhite1 catch-copy">
+        <h2 class="title2">アンケート</h2>
+        <p class="title-text">
+            ひとりで悩まないためのヒント
+        </p>
+    </section>
+    <section class="BGpink future">
+        <figure>
+            <img
+                class="sle-tell-img"
+                src="<?php echo esc_url(get_template_directory_uri()); ?>/assets/images/flower.png"
+                alt="一輪の花"
+            />
+        </figure>
+    </section>
+    
+    <!-- パンくずリスト　スタート -->
+    <section class="breadcrumb_wrapper">
+
+        <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+                <li class="breadcrumb__list">
+                    <a href="<?php echo esc_url( home_url('/') ); ?>">
+                        <img class="icon_home" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/home.svg" alt="home">
+                        私たちのSLE(TOP PAGE)
+                    </a>
+                </li>
+                
+                <?php
+                    if (is_page()) {
+                        $ancestors = array_reverse(get_post_ancestors(get_the_ID()));
+                        foreach ($ancestors as $ancestor_id) {
+                            echo '<li class="breadcrumb__list"><a href="' . esc_url(get_permalink($ancestor_id)) . '">'
+                            . esc_html(get_the_title($ancestor_id)) . '</a></li>';
+                        }
+                    }
+                    ?>
+
+                <li class="breadcrumb__list">
+                    <?php echo esc_html( get_the_title() ); ?>
+                </li>
+            </ol>
+        </nav>
+    </section>
+    <!-- パンくずリスト　終わり -->
+
+    <!-- コンテンツ始まり -->
+    <section class="BGwhite">
+        <h3 class="enquete_result">アンケート結果</h3>
+        <!-- オープンチャットのアンケート 始まり -->
+        <article class="enquete_result_wrapper">
+            <h4 class="enquete_title highlighter ">全身性エリテマトーデスのアンケート</h4>
+            <h5 class="enquete_subtitle">2024年オープンチャットにてアンケートを実施しました。<br>25名の方からご協力いただけました。<br>いつもご協力いただきありがとうございます。</h5>	
+            
+            <h6 class="openchat_enquete_title">質問1 患者様は女性ですか？男性ですか？</h6>
+            <p class="title_result">女性 24名(96%)<br>男性 1名(4%)</p>
+            
+            <h6 class="openchat_enquete_title">質問2 年齢はおいくつですか</h6>
+            <ul class="title_result_list">
+                <li class="result_item">13名（52%）30代</li>
+                <li class="result_item">6名（24%） 40代</li>
+                <li class="result_item">3名（12%） 20代</li>
+                <li class="result_item">2名（ 8%） 50代</li>
+                <li class="result_item">1名（ 2%） 10代後半 </li>
+            </ul>
+            
+            <h6 class="openchat_enquete_title">質問3 発症してから何年経ちますか</h6>
+            <ul class="title_result_list">
+                <li class="result_item">7名（28%）5年以上10年未満</li>
+                <li class="result_item">6名（24%）1年未満</li>
+                <li class="result_item">3名（12%）1年以上3年未満</li>
+                <li class="result_item">3名（12%）3年以上5年未満</li>
+                <li class="result_item">3名（12%）10年以上15年未満</li>
+                <li class="result_item">3名（12%）15年以上20年未満</li>
+                <li class="result_item">3名（12%）20年以上25年未満</li>
+                <li class="result_item">1名（ 4%）25年以上30年未満</li>
+            </ul>
+            
+            <h6 class="openchat_enquete_title">質問4 SLEを発症した時の症状を教えてください。</h6>
+            <ul class="title_result_list">
+                <li class="result_item">髪の毛の脱毛、手、足に力が入らないかんじ</li>
+                <li class="result_item">蝶形紅斑、倦怠感</li>
+                <li class="result_item">発熱、顔のむくみ、蝶形紅斑、だるさ、蛋白尿（急性腎不全の状態）</li>
+                <li class="result_item">肘の発赤、鼻の付け根の発赤</li>
+                <li class="result_item">突然足の甲にゴルフボールくらいの腫れと痛み。だんだん酷くなり、痛みが足首、膝、股関節と関節が痛くなり、全身筋肉痛。顔の赤い発疹。倦怠感。</li>
+                <li class="result_item">蝶形紅斑</li>
+                <li class="result_item">高熱、ネフローゼ症候群による全身の浮腫み、倦怠感、肺に水が溜まっていた。</li>
+                <li class="result_item">小さな間接の腫れ 疼痛</li>
+                <li class="result_item">関節痛 鬱 全身の痛み 微熱</li>
+                <li class="result_item">関節痛がひどくなり外科でリハビリをするものの改善せず、内科で相談したところ大学病院を紹介された。</li>
+                <li class="result_item">発熱、むくみ、起床時の手足の強ばり</li>
+                <li class="result_item">関節痛</li>
+                <li class="result_item">高熱、尿蛋白、腎炎</li>
+                <li class="result_item">意識が朦朧としていたので覚えていない(多分腎臓)</li>
+                <li class="result_item">多関節炎、頭痛、倦怠感</li>
+                <li class="result_item">発熱、倦怠感、脱毛、顔の火照りと発疹</li>
+                <li class="result_item">倦怠感、関節痛</li>
+                <li class="result_item">倦怠感、微熱</li>
+                <li class="result_item">右半身全部硬直に近かったです。膝を曲げたらそこから伸ばすのに泣くほど辛かったです。肘も同様で。</li>
+                <li class="result_item">関節炎</li>
+                <li class="result_item">ネフローゼ症候群</li>
+                <li class="result_item">意識不明</li>
+                <li class="result_item">関節炎、胸膜炎、発熱</li>
+                <li class="result_item">手指の強張りと関節痛</li>
+                <li class="result_item">関節痛、堞形紅斑、脱毛、微熱</li>
+            </ul>
+
+            <h6 class="openchat_enquete_title">質問5 SLEを発症して初めての内服薬は何でしたか？（複数回答あり）</h6>
+            <ul class="title_result_list">
+                <li class="result_item">プレドニン 19名</li>
+                <li class="result_item">プラケニル 8名</li>
+                <li class="result_item">ロキソニンなどの痛み止め 8名</li>
+                <li class="result_item">そのほか 8名</li>
+                <li class="result_item">骨粗鬆症の薬 5名</li>
+                <li class="result_item">セルセプト 3名</li>
+                <li class="result_item">プログラフ 3名</li>
+                <li class="result_item">プレドニン以外のステロイド 3名</li>
+                <li class="result_item">ベンリスタ 1名</li>
+            </ul>
+            
+            <h6 class="openchat_enquete_title">質問6 痛み止めはどの薬を使っていますか（複数回答あり）</h6>
+            <ul class="title_result_list">
+                <li class="result_item">ロキソニン 10名</li>
+                <li class="result_item">カロナール 6名</li>
+                <li class="result_item">セレコキシブ 1名</li>
+                <li class="result_item">セレコックス 2名</li>
+                <li class="result_item">市販の痛み止め 2名</li>
+                <li class="result_item">未使用 3名</li>
+            </ul>
+            
+            <h6 class="openchat_enquete_title">質問7 湿布薬は使っていますか</h6>
+            <ul class="title_result_list">
+                <li class="result_item">未使用 12名</li>
+                <li class="result_item">たまに使用 4名</li>
+                <li class="result_item">セレコックス 2名</li>
+                <li class="result_item">アドフィードパップ 1名</li>
+                <li class="result_item">フェルビナクスティック 1名</li>
+                <li class="result_item">ロキソプロフェンの湿布 1名</li>
+                <li class="result_item">ロコアテープ 1名</li>
+                <li class="result_item">かぶれるのでたまに 1名</li>
+                <li class="result_item">市販薬 1名</li>
+            </ul>
+            
+            <h6 class="openchat_enquete_title">質問8 プレドニンは何ミリからスタートしましたか？</h6>
+            <ul class="title_result_list">
+                <li class="result_item">5ミリ 1名</li>
+                <li class="result_item">7ミリ 1名</li>
+                <li class="result_item">10ミリ 3名</li>
+                <li class="result_item">20ミリ 4名</li>
+                <li class="result_item">30ミリ 5名</li>
+                <li class="result_item">40ミリ 2名</li>
+                <li class="result_item">60ミリ 2名</li>
+                <li class="result_item">65ミリ 1名</li>
+                <li class="result_item">75ミリ 1名</li>
+                <li class="result_item">80ミリ 1名</li>
+                <li class="result_item">100ミリ 1名</li>
+                <li class="result_item">不明 1名</li>
+            </ul>
+            
+            <h6 class="openchat_enquete_title">質問9 パルスをしたことはありますか？何クールしましたか？</h6>
+            <ul class="title_result_list">
+                <li class="result_item">1クール 5名</li>
+                <li class="result_item">2クール 2名</li>
+                <li class="result_item">パルスをしたが不明 2名</li>
+                <li class="result_item">なし 13名</li>
+            </ul>
+            
+            <h6 class="openchat_enquete_title">質問10 プレドニンの副作用はどのようなものが出ましたか？</h6>
+            <ul class="title_result_list">
+                <li class="result_item">食欲増強</li>
+                <li class="result_item">精神不安定、鬱症状</li>
+                <li class="result_item">骨粗鬆症　ステロイド白内障</li>
+                <li class="result_item">帯状疱疹に初めてなったなど、感染症にかかりやすく、治りにくい。むくみ、ムーンフェイス、とにかくかなり体重が増えて戻らない。筋力低下。</li>
+                <li class="result_item">手先の震え</li>
+                <li class="result_item">増毛、ムーンフェイス</li>
+                <li class="result_item">食欲増進▶︎太る</li>
+                <li class="result_item">鬱 ムーンフェイス 肥満 高血圧</li>
+                <li class="result_item">30ミリのとき。脱毛、知覚過敏、食欲増進、頬の肉がたくさんついた</li>
+                <li class="result_item">初期の頃に寝付きが悪い、ムーンフェイス</li>
+                <li class="result_item">ムーンフェイス、食欲増進が出た</li>
+                <li class="result_item">食欲増進、不眠、情緒不安定</li>
+                <li class="result_item">ムーンフェイス？だったかと(意識が朦朧としていたので確かでは無い)</li>
+                <li class="result_item">不眠、ムーンフェイス、食欲亢進、集中力低下</li>
+                <li class="result_item">顔のむくみ、ムーンフェイス、体重増加</li>
+                <li class="result_item">15ミリでムーンフェイス</li>
+                <li class="result_item">ムーンフェイス、体重増加</li>
+                <li class="result_item">10キロ以上太りました。
+                    飲んでてもやっぱり抑えきれない関節痛もあり。
+                    倦怠感。もうなにからなにが副作用か分かりませんが毎日体調がコロコロしてます。</li>
+                <li class="result_item">倦怠感 不眠 抑うつ気分</li>
+                <li class="result_item">ムーンフェイス、関節痛、不眠、イライラ、脱毛、網膜剥離、便秘、倦怠感、高血圧</li>
+                <li class="result_item">ムーンフェイス、体重増加など</li>
+                <li class="result_item">火照り、不眠、ムーンフェイス</li>
+                <li class="result_item">ムーンフェイス、食欲増進</li>
+            </ul>
+            <h6 class="openchat_enquete_title">質問11 再燃をしたことがありますか？再燃になった方はどのような症状でしたか？</h6>
+            <ul class="title_result_list">
+                <li class="result_item">全身発疹。関節炎、腫れ、こわばり。酷い倦怠感。微熱。</li>
+                <li class="result_item">体のだるさ、むくみ(体重が通常より➕10kg)</li>
+                <li class="result_item">発熱、蝶形紅斑</li>
+                <li class="result_item">覚えていない</li>
+                <li class="result_item">顔が火照り発疹が出る</li>
+                <li class="result_item">関節痛、起き上がれない倦怠感</li>
+                <li class="result_item">ステロイド減薬した時に</li>
+                <li class="result_item">補体の低下</li>
+                <li class="result_item">補体の低下</li>
+                <li class="result_item">中枢神経ループスから脳梗塞で再燃した。</li>
+                <li class="result_item">再燃はない 8名</li>
+            </ul>
+            <h6 class="openchat_enquete_title">質問12 今はプレドニンを何ミリ服薬していますか？</h6>
+            <ul class="title_result_list">
+                <li class="result_item">0ミリ 3名</li>
+                <li class="result_item">1ミリ 1名</li>
+                <li class="result_item">2ミリ 3名</li>
+                <li class="result_item">3ミリ 3名</li>
+                <li class="result_item">4ミリ 2名</li>
+                <li class="result_item">5ミリ 3名</li>
+                <li class="result_item">7.5ミリ 2名</li>
+                <li class="result_item">8ミリ 1名</li>
+                <li class="result_item">10ミリ 1名</li>
+                <li class="result_item">11.5ミリ 1名</li>
+                <li class="result_item">12.5ミリ 2名</li>
+                <li class="result_item">20ミリ 1名</li>
+                <li class="result_item">25ミリ 1名</li>
+            </ul>
+            <h6 class="openchat_enquete_title">質問13 ご家族からの理解はありますか？</h6>
+            <ul class="title_result_list">
+                <li class="result_item">ある 19名</li>
+                <li class="result_item">ない 6名</li>
+            </ul>
+            <h6 class="openchat_enquete_title">質問14 恋人や配偶者からの理解はありますか？</h6>
+            <ul class="title_result_list">
+                <li class="result_item">ある 15名</li>
+                <li class="result_item">ない 4名</li>
+            </ul>
+            <h6 class="openchat_enquete_title">質問15 友達や身近な人からの理解はありますか？</h6>
+            <ul class="title_result_list">
+                <li class="result_item">ある 19名</li>
+                <li class="result_item">ない 6名</li>
+            </ul>
+            <h6 class="openchat_enquete_title">質問16 理解がないときはどうしていますか？</h6>
+            <ul class="title_result_list">
+                <li class="result_item">説明する</li>
+                <li class="result_item">今のところ育休中で関わる人が夫しかいないため特に何もしていない</li>
+                <li class="result_item">友人には話してる人としてない人が居るため</li>
+                <li class="result_item">病院でもらった冊子などで根気よく説明する</li>
+                <li class="result_item">理解できない人達なので、諦めてます。</li>
+                <li class="result_item">具体的な症状を説明する。感情的にならない。無理をして心身に負荷がかかり続けると、将来大病するリスクがある等。</li>
+                <li class="result_item">耐える。</li>
+                <li class="result_item">無理に理解して欲しいとは思わない</li>
+                <li class="result_item">説明はするが、相手が理解することを期待しないようにしている</li>
+                <li class="result_item">職場では上司に相談する</li>
+                <li class="result_item">相当身近な人しか話さないようにしています。怠けだのどうの言われても、意地と根性で何とかしています</li>
+                <li class="result_item">病名は言わず、疲れやすいなど、配慮してほしいことのみ伝える。</li>
+                <li class="result_item">なるべく分かりやすく説明する</li>
+                <li class="result_item">寝込む、レイノー症状が出ている時は見せる(家族限定)</li>
+                <li class="result_item">1人になる時間を確保して体調回復する</li>
+                <li class="result_item">病気で気を使わせて、全力で遊べたりお酒飲めないと迷惑かなって友達とほぼ毎日遊んでたのを発症を知ってからは誰とも遊ばなくなりました。</li>
+                <li class="result_item">とりあえず症状を伝え体調がしんどい旨を伝える。具合悪い姿をみせる</li>
+                <li class="result_item">イライラしてしまい、放棄する</li>
+                <li class="result_item">説明するか関わらないようにします</li>
+                <li class="result_item">主治医から説明してもらう</li>
+                <li class="result_item">理解を得たい人には説明する。資料を提示する。</li>
+            </ul>
+            <h6 class="openchat_enquete_title">質問17 どのような内容を理解して欲しいですか？</h6>
+            <ul class="title_result_list">
+                <li class="result_item">動き過ぎるとだるく疲れやすいこと</li>
+                <li class="result_item">倦怠感や疲れが出やすいこと、外での作業が長時間は難しいかもしれないこと</li>
+                <li class="result_item">理解してほしいことは思いつきませんが、この病気自体を知って欲しい</li>
+                <li class="result_item">紫外線にあたると体調が悪くなる事  起きられないくらいの倦怠感がある時があり、寝てゆっくりしたら楽になりまた動けるというように、波があるので、決して怒ってたりする訳じゃない事。</li>
+                <li class="result_item">ネフローゼ症候群を併発しているので、塩分制限があること。ただ、ゆるい制限なので外食時は気にせず食べています。心身のストレス過多が、後々大病を引き起こす可能性があること。</li>
+                <li class="result_item">倦怠感が強く出る時はなまけているのではないこと。指関節が痛むと字も書けない。箸も持てない。コップを持つこともできない。トイレでの下着の上げ下げも時間がかかる。</li>
+                <li class="result_item">倦怠感を 同じ病気でもないのに私もあるわよとか、言わないで欲しい</li>
+                <li class="result_item">日光に当たることへの不安感が強いこと。別の病気の方が日常生活に影響があるが、そちらも珍しい病気のため、他人の理解は諦め気味。</li>
+                <li class="result_item">外見では分からないけどしんどい時があること</li>
+                <li class="result_item">日光に当たれないこと</li>
+                <li class="result_item">見た目は普通だが、関節痛があったり疲れやすいこと。こまめに休憩すれば動けること。</li>
+                <li class="result_item">職場にて症状の関係で通院が増える月があるので理解してほしい、休みたくて休んでいるわけではない、数時間炎天下での作業はなるべく避けたい</li>
+                <li class="result_item">日によって症状、痛みが違う事</li>
+                <li class="result_item">同じように行動すると体調悪化すること、見た目で判断して欲しくないこと</li>
+                <li class="result_item">その日その日の体調の急変と、関節痛でコロコロ痛くなる場所が変わるところです。</li>
+                <li class="result_item">倦怠感が強い。集中力が落ちているため仕事で責任を任されると辛い。</li>
+                <li class="result_item">とにかくしんどくて動けない時は理解してほしいです</li>
+                <li class="result_item">その日によって体調の波がある事</li>
+                <li class="result_item">自分でコントロールできないこと。ストレスがいけないこと。薬の副作用。配慮事項。</li>
+                <li class="result_item">体調が日によりまちまちなので予定のキャンセルとかがあること。 </li>
+            </ul>
+            <h6 class="openchat_enquete_title">質問18 SLE患者も障害者が使える福祉サービスを使えるのはご存知ですか？</h6>
+            <ul class="title_result_list">
+                <li class="result_item">使っている 8名</li>
+                <li class="result_item">使っていないが知っている 9名</li>
+                <li class="result_item">知らない 10名</li>
+            </ul>
+            <h6 class="openchat_enquete_title">質問19 お仕事は何をされていますか？</h6>
+            <ul class="title_result_list">
+                <li class="result_item">事務</li>
+                <li class="result_item">介護職</li>
+                <li class="result_item">育休明けたら事務仕事をする予定</li>
+                <li class="result_item">在宅で事務職です。でも後々は週一でも出社したいし、無期派遣社員なので、正社員登用を目指しています。</li>
+                <li class="result_item">看護師</li>
+                <li class="result_item">B型作業所の生活支援員</li>
+                <li class="result_item">発症前よりIT関係のデスクワーク</li>
+                <li class="result_item">言語聴覚士</li>
+                <li class="result_item">B型作業所</li>
+                <li class="result_item">専門誌の出版社の編集アシスタント</li>
+                <li class="result_item">保育士</li>
+                <li class="result_item">教職員(公務員)</li>
+                <li class="result_item">医療機器修理、難病で特別に月６回まで在宅可</li>
+                <li class="result_item">工場→韓国大衆居酒屋パート→ホテル→幸楽苑のパート</li>
+                <li class="result_item">ファストフードのクルー</li>
+                <li class="result_item">工場事務</li>
+                <li class="result_item">経理の事務とアロマテラピー</li>
+                <li class="result_item">休職中</li>
+            <h6 class="openchat_enquete_title">質問20 お仕事の体系を教えてください？</h6>
+            <ul class="title_result_list">
+                <li class="result_item">一般雇用パート 9名</li>
+                <li class="result_item">一般雇用正社員 7名</li>
+                <li class="result_item">就労支援B型 2名</li>
+                <li class="result_item">障害者雇用パート 1名</li>
+                <li class="result_item">その他 3名</li>  
+            </ul>
+            <h6 class="openchat_enquete_title">質問21 学生ならではの悩みはありますか？</h6>
+            <ul class="title_result_list">
+                <li class="result_item">友達と遊ぼうとしても体力が保たないことがあること。</li>  
+                <li class="result_item">今はもう過去ですが，運動禁止と病院から学校に連絡と診断書を出し，一切運動させてもらえなかったです。
+                    病気で見学していることは伝えないのがいいとの事で、そのせいでサボっているずるいなどかなり悪口を言われました。</li>   
+            </ul>
+            <h6 class="openchat_enquete_title">質問22 学生ならではの悩みは誰かに相談していますか？</h6>
+            <ul class="title_result_list">
+                <li class="result_item">相談はしていない</li>  
+            <h6 class="openchat_enquete_title">質問23 学生ならではの工夫はありますか？</h6>
+            <ul class="title_result_list">
+                <li class="result_item">通信制の高校に通うこと。
+                    体調に関しての配慮もあり、出席の授業も少なく変更が効きやすいので、身体と向き合いつつ学生生活を送れます</li>  
+            </ul>
+            <h6 class="openchat_enquete_title">質問24 お仕事や学校に行けない方にご質問です。どのような症状が出ていますか？</h6>
+            <ul class="title_result_list">
+                <li class="result_item">だるさ　熱</li>  
+                <li class="result_item">血行障害が出ていて座ることができない。
+                    体がきつい時が多く、寝ていることが多い。</li>  
+                <li class="result_item">不眠、倦怠感</li>  
+                <li class="result_item">重度貧血。四六時中めまい(原因未特定)</li>  
+                <li class="result_item">倦怠感。</li>  
+            </ul>
+            <h6 class="openchat_enquete_title">質問25 趣味や好きなことはありますか？</h6>
+            <ul class="title_result_list">
+                <li class="result_item">ゲーム</li> 
+                <li class="result_item">ピラティス</li> 
+                <li class="result_item">ツーリング、ゲーム</li> 
+                <li class="result_item">温泉、旅行</li> 
+                <li class="result_item">サウナ、岩盤浴、カラオケ</li> 
+                <li class="result_item">和太鼓、バスケ、ドライブ</li> 
+                <li class="result_item">音楽、YouTube鑑賞、ファッション、スヌーピー グッズ収集。食べること。</li> 
+                <li class="result_item">映画鑑賞。旅行が好きだったが今は難しい。</li> 
+                <li class="result_item">食べ歩き カラオケ</li> 
+                <li class="result_item">音楽鑑賞(SNSのおかげで推しの情報が集めやすくなった)、 子育てが一段落してライブなどにも行けるようになった</li> 
+                <li class="result_item">ペット、音楽</li> 
+                <li class="result_item">飲みに行くことやドライブ</li> 
+                <li class="result_item">こままわし、工作、スプラトゥーンが趣味です。遠くにいく事も好きです。</li> 
+                <li class="result_item">ゆずの曲を聴くこと、テレビでスポーツ観戦、家庭菜園</li> 
+                <li class="result_item">音楽鑑賞、映画鑑賞、絵を描くことが趣味です。美術館へ行ったり公園へ散歩に行くことも好きです。</li> 
+                <li class="result_item">旅行、バレエ鑑賞</li> 
+                <li class="result_item">旅館、ライブ</li> 
+                <li class="result_item">YouTube鑑賞 サブスクリプション鑑賞</li> 
+                <li class="result_item">ない</li> 
+                <li class="result_item">ライブ</li> 
+                <li class="result_item">エッセンシャルオイル</li> 
+                <li class="result_item">朝の連続小説ドラマ。食べること。</li> 
+                <li class="result_item">LIVEにいく。旅行。</li> 
+            </ul>
+            <h6 class="openchat_enquete_title">質問26 紫外線に当たるとどのような症状が出ますか？それとも症状は出ませんか？</h6>
+            <ul class="title_result_list">
+                <li class="result_item">倦怠感</li>  
+                <li class="result_item">脱毛　倦怠感　痛み</li>  
+                <li class="result_item">顔面紅斑、関節炎、倦怠感</li>  
+                <li class="result_item">直接の影響かどうかはハッキリしないが、発疹</li>  
+                <li class="result_item">あまり症状はないが、時々倦怠感がある</li>  
+                <li class="result_item">倦怠感が出ることがあります</li>  
+                <li class="result_item">顔面紅斑、火照り、多汗(？)</li>  
+                <li class="result_item">顔に斑点ができる時がある</li>  
+                <li class="result_item">頭皮が痛いクシもその日のシャワーが苦痛に 倦怠感、少し暑いだけで全身ブワッと嫌な感じで耐えられない感じで。顔面紅班が濃くなり、蕁麻疹がいろんなところに出ます。</li>  
+                <li class="result_item">発熱 倦怠感 紫外線が当たったところが痒くなる</li>  
+                <li class="result_item">赤い発疹が出る</li>  
+                <li class="result_item">体が疲れやすい、頭痛、肌がピリピリ痛い</li>  
+                <li class="result_item">頭痛。倦怠感。</li>  
+                <li class="result_item">倦怠感、顔のかゆみ</li>  
+                <li class="result_item">症状はでません 9名</li>  
+            </ul>
+            <h6 class="openchat_enquete_title">質問27 紫外線に当たり症状が出たらどうのように改善していますか</h6>
+            <ul class="title_result_list">
+                <li class="result_item">していません 3名</li>   
+                <li class="result_item">顔はパックして、冷やす。関節炎は薬飲んで寝る。</li>   
+                <li class="result_item">軟膏を塗る</li>   
+                <li class="result_item">顔を洗ったり、冷やしたりする。</li>   
+                <li class="result_item">ひたすら寝る</li>   
+                <li class="result_item">プロトピック軟膏で改善する</li>   
+                <li class="result_item">頭皮を冷やしたり、ぬるいおゆでシャワーしたり、痛い間はくしを控えてます。</li>   
+                <li class="result_item">とりあずかゆみ止めの塗り薬</li>   
+                <li class="result_item">アイスノンで冷やす</li>   
+                <li class="result_item">とにかく休む</li>   
+                <li class="result_item">頭や身体を冷やす。</li>      
+            </ul>
+            <h6 class="openchat_enquete_title">質問28 紫外線対策はどのような事をしていますか？</h6>
+            <ul class="title_result_list">
+                <li class="result_item">日焼け止め　帽子　アームカバー　サングラス　マスク</li>   
+                <li class="result_item">日焼け止めクリーム、帽子、日傘</li>     
+                <li class="result_item">日焼け止め</li>     
+                <li class="result_item">帽子</li>     
+                <li class="result_item">日焼け止めクリーム一日に何度も塗る。
+                    UVカットの服、帽子、サングラス、日傘は必ず使っている。</li>     
+                <li class="result_item">アームカバー、マスク、日傘、長ズボン</li>     
+                <li class="result_item">SPA50、PA++++の日焼け止め、日傘を使用しています。車に乗る時はアームカバーを着用。</li>     
+                <li class="result_item">日焼け止めクリーム、帽子、日傘、UVカット衣類</li>     
+                <li class="result_item">日焼け止め アームカバー 日傘</li>     
+                <li class="result_item">日焼け止め、アームカバー、帽子か日傘</li>     
+                <li class="result_item">日焼け止めクリーム、アームカバー、フェイスカバー、サングラス、日傘</li>     
+                <li class="result_item">日焼け止め、アームカバー、日傘</li>     
+                <li class="result_item">長ズボンの着用、上着の着用</li>     
+                <li class="result_item">日焼け止めクリーム＋UVカットマスク＋つばの広い帽子、日傘
+                    家庭菜園をするときにはフェイスマスク(ヤケーヌ)を使用</li>     
+                <li class="result_item">日焼け止めクリームやスプレー、アームカバー、帽子、日傘使用</li>     
+                <li class="result_item">紫外線防止クリーム(大高酵素)帽子、上着、アームカバー、日傘</li>     
+                <li class="result_item">日傘、長袖、日焼け止め</li>     
+                <li class="result_item">日傘いつでも。　SP50のポール&ジョーのメーカーの化粧下地？みたいなものを塗って化粧しています。
+                    帽子も今年は暑いので買いました。
+                    おもに半袖やキャミソールを下に上には白い羽織るものを羽織っています。
+                    足を出さず、いろんなズボンでやりくりしてます。
+                    </li>     
+                <li class="result_item">日焼け止め
+                    帽子
+                    アームカバー
+                    日傘</li>     
+                <li class="result_item">日焼け止め、帽子、パーカー</li>     
+                <li class="result_item">日焼け止め、日傘</li>     
+                <li class="result_item">気にしてない</li>     
+                <li class="result_item">日焼け止め、日傘、アームカバー、マスク、首にタオル、靴下着用。時々サングラス。</li>     
+                <li class="result_item">日傘、帽子、日焼け止め</li>     
+            </ul>
+            <h6 class="openchat_enquete_title">質問29 おすすめの紫外線対策はありますか？</h6>
+            <ul class="title_result_list">
+                <li class="result_item">化粧下地はドモホルンリンクルのドレスクリーム</li>   
+                <li class="result_item">日焼け止めクリームは、こまめに塗り直しする</li>   
+                <li class="result_item">日焼け止めは首の後ろや耳まで塗るようにしている(塗り忘れて発疹が出たと推測)</li>   
+                <li class="result_item">日傘</li>   
+                <li class="result_item">ヤケーヌという商品は、フェイスマスクの他にアームカバーなどもあり、メッシュになっていて涼しいのでおすすめです</li>   
+                <li class="result_item">日焼け止めと帽子は必須です。</li>   
+                <li class="result_item">UVカットができる上着、アームカバー</li>                           
+            </ul>
+            <h6 class="openchat_enquete_title">質問30 関節痛・こわばり・関節の腫れがある方にご質問です。
+                症状がある時はどのように対処していますか？</h6>
+            <ul class="title_result_list">
+                <li class="result_item">カロナールをのむ</li>   
+                <li class="result_item">マッサージ、軽く動かす</li>   
+                <li class="result_item">腫れて熱を持つ時は冷やして湿布する。セレコキシブを飲む。とにかく休む。こわばる時、アミノプロテインを飲むと楽になります。</li>   
+                <li class="result_item">長袖長ズボンで過ごして、ぬるめのお風呂に浸かって血行を良くしています。冬はレッグウォーマーをしていて、レイノーが出なくなりました。</li>   
+                <li class="result_item">あたためてゆっくり動かす</li>   
+                <li class="result_item">フェルビナクスティックを1日数回塗る
+                    手首、肘はサポーターをつける
+                    酷いときは予定や家事は諦めて横になって安静にする</li>   
+                <li class="result_item">あたためる、動かさない(動かせない)</li>   
+                <li class="result_item">動かさない</li>   
+                <li class="result_item">ロキソプロフェンのんでもきかないときは、
+                    ロキソプロフェンの湿布を貼る。どうしても痛い時は貼って横になってます。</li>   
+                <li class="result_item">コパイバのエッセンシャルオイルを塗る</li>   
+                <li class="result_item">お風呂にはいる。</li>    
+                <li class="result_item">ロキソニンを飲む。 2名</li> 
+            </ul>
+            <h6 class="openchat_enquete_title">質問31 内臓に症状がある方にご質問です。気をつけていることはありますか？</h6>
+            <ul class="title_result_list">
+                <li class="result_item">蛋白、塩分を気にしながら摂取している</li>   
+                <li class="result_item">塩分を控えている、お菓子やジャンクフードの頻度を減らし、野菜の摂取量を増やしました。</li>   
+                <li class="result_item">お酒，タバコ，　</li>   
+                <li class="result_item">症状はないが、減塩(家系に腎臓疾患がいるため)</li>   
+                <li class="result_item">（腎臓）塩分を気にした食事を作る</li>   
+                <li class="result_item">添加物を気にして食事を取る</li>   
+                <li class="result_item">特にしていない 3名</li>   
+            </ul>
+            <h6 class="openchat_enquete_title">質問32 家事をしている方にご質問です。症状が出ている時、一番辛い家事はなんですか？</h6>
+            <ul class="title_result_list">
+                <li class="result_item">家事全般 1名</li>   
+                <li class="result_item">そうじ 2名</li>   
+                <li class="result_item">料理 7名</li>   
+                <li class="result_item">洗濯を干す 3名</li>   
+                <li class="result_item">料理、洗濯 1名</li>   
+                <li class="result_item">料理、そうじ 1名</li>   
+                <li class="result_item">洗濯 1名</li>   
+                <li class="result_item">洗濯や包丁を使うこと 1名</li>   
+                <li class="result_item">食器洗い 1名</li>    
+            </ul>
+            <h6 class="openchat_enquete_title">質問33 辛い家事をどうやって乗り越えていますか？</h6>
+            <ul class="title_result_list">
+                <li class="result_item">お弁当にする</li>   
+                <li class="result_item">カップ麺にしたり出前を頼む</li>   
+                <li class="result_item">休みながら行ってます</li>   
+                <li class="result_item">宅配を頼む</li>   
+                <li class="result_item">家事をしない。出来ない時もあると思ってやらない。冷食や簡単なものにしています。</li>   
+                <li class="result_item">娘に声をかけてお願いします。</li>   
+                <li class="result_item">痛み止めが効いている間に行動しています</li>   
+                <li class="result_item">外食や家族に作ってもらう</li>   
+                <li class="result_item">家族を頼る</li>    
+                <li class="result_item">家族に手伝ってもらう、コンビニやスーパーのお弁当などを買う。うがい、</li>    
+                <li class="result_item">子に手伝ってもらう</li>    
+                <li class="result_item">まとめて元気な時にする、ロボット掃除機</li>    
+                <li class="result_item">毎日しなくても大丈夫。できる時にやるというマインドです</li>    
+                <li class="result_item">パートナーに頼む ご飯は買ってきてもらう</li>    
+                <li class="result_item">意地でやる</li>    
+                <li class="result_item">食洗機を使うか我慢する</li>    
+                <li class="result_item">冷凍食品や惣菜の利用</li>    
+                <li class="result_item">族に変わってもらう。</li>      
+            </ul>
+            <h6 class="openchat_enquete_title">質問34 日頃、感染症の感染予防として気をつけていることはありますか？</h6>
+            <ul class="title_result_list">
+                <li class="result_item">不織布マスク 8名</li>   
+                <li class="result_item">手洗い 13名</li>   
+                <li class="result_item">うがい 13名</li>   
+                <li class="result_item">消毒 10名</li>   
+                <li class="result_item">人混みを避ける 4名</li>   
+                <li class="result_item">距離 1名</li>   
+                <li class="result_item">スマホの消毒 1名</li>   
+                <li class="result_item">無駄に物を触りません 1名</li>     
+                <li class="result_item">健康的な体づくり 1名</li>     
+            </ul>
+            <h6 class="openchat_enquete_title">質問35 コロナに感染したことありますか？</h6>
+            <ul class="title_result_list">
+                <li class="result_item">感染した 21名</li>   
+                <li class="result_item">感染したことがない 4名</li>       
+            </ul>
+            <h6 class="openchat_enquete_title">質問36 コロナに感染。どのような症状どのような症状が出て、お薬はどのお薬でしたか？</h6>
+            <ul class="title_result_list">
+                <li class="result_item">カロナール 発熱 倦怠感</li>   
+                <li class="result_item">発熱、咳　薬は覚えていない</li>   
+                <li class="result_item">発熱　1日のみ　解熱剤カロナール</li>   
+                <li class="result_item">発熱、喉の痛み、関節痛、小青龍湯、桔梗湯、カロナール</li>   
+                <li class="result_item">発熱、喉の痛み、鼻づまり、咳、痰</li>   
+                <li class="result_item">発熱、倦怠感、喉の激痛、咳、黄疸、味覚障害。お薬はレスプレン(咳止め、痰切り)、アンブロキール塩酸(痰切り)、アズノール(うがい薬)、カロナール(解熱剤、腎臓への負担を軽くするため)、トラネキサム酸錠(炎症、出血を抑える)、トローチ。</li>   
+                <li class="result_item">喉の痛みと倦怠感、味覚障害。ロキソニン。</li>   
+                <li class="result_item">発熱 倦怠感 喉の痛み ゾコーバ</li>   
+                <li class="result_item">発熱、倦怠感、喉の痛み カロナール、せき止め、抗生物質</li>   
+                <li class="result_item">発熱、倦怠感、喉の痛み カロナール、せき止め、抗生物質</li>   
+                <li class="result_item">発熱、咳、喉の痛み、ラゲブリオ</li>   
+                <li class="result_item">発熱、薬は漢方（咳止め）とロキソニンでした</li>   
+                <li class="result_item">熱、喉</li>   
+                <li class="result_item">喉の痛み、咳、鼻水、くしゃみ、下痢など
+                    アストミン、トラネキサム酸、カルボシステイン カロナール</li>   
+                <li class="result_item">咳(喉の痛みなし)、発熱38℃</li>   
+                <li class="result_item">発熱 咳 鼻水 喉の痛み 咳止め、痰切り、鼻炎薬</li>   
+                <li class="result_item">喉の痛み、倦怠感　　カロナール</li>   
+                <li class="result_item">発熱、のどの痛み、</li>   
+                <li class="result_item">咳　薬なし</li>   
+                <li class="result_item">発熱、咳、喉の痛み、頭痛　レムデシビル</li>   
+                <li class="result_item">発熱、せき、のどの痛み。
+                    風邪薬、カロナール</li>          
+            </ul>
+            <h6 class="openchat_enquete_title">質問37 コロナに感染した方にお尋ねします。後遺症はありましたか？</h6>
+            <ul class="title_result_list">
+                <li class="result_item">咳が1ヶ月ほど続いたと思う</li>   
+                <li class="result_item">匂いがしなくなった。咳が1カ月続いた。
+                    動悸、息切れするようになった。だるさが抜けない。</li>   
+                <li class="result_item">先週感染したばかりです。症状として味覚障害はありましたが回復しました。現在は咳と痰が少し出ます。</li>   
+                <li class="result_item">味覚障害が1ヶ月。</li>   
+                <li class="result_item">咳が続いた</li>   
+                <li class="result_item">ひどい頭痛が1ヵ月(別の持病の引き金になった)</li>   
+                <li class="result_item">コロナ感染後に疲れやすい、異常な睡魔が出現しました</li>   
+                <li class="result_item">咳</li>   
+                <li class="result_item">約10日前にコロナに罹患し、現在も咳、鼻づまりが続いている。</li>   
+                <li class="result_item">約10日前にコロナに罹患し、現在も咳、鼻づまりが続いている。</li>   
+                <li class="result_item">味覚障害、疲れやすくなった</li>   
+                <li class="result_item">味覚障害、嗅覚障害が2週間程</li>   
+                <li class="result_item">咳が1ヶ月続いた。半年以上続くめまい(PPPD)もコロナかワクチンのせいではないかと思っている。</li>   
+                <li class="result_item">なし 5名</li>            
+            </ul>
+        </article>
+        <!-- オープンチャットのアンケート 終わり -->
+    </section>
+    <section class="pagenation">
+        <!-- ページネーション　スタート -->
+        <div class="nav-links">
+            <a class="page-prev" href="<?php echo esc_url( home_url('/enquete/')); ?>">アンケート一覧</a>
+            <a class="page-next" href="<?php echo esc_url( home_url('/covid19/') ); ?>">アンケート結果</a>
+        </div>
+        <!-- ページネーション　終わり -->
+    </section>
+</main>
+<?php get_footer(); ?>

@@ -3,7 +3,7 @@
 body {
     background: #FDFCFC;
     color: #462401;
-    font-family: fot-tsukuardgothic-std, tbudrgothic-std, 'Open Sans';
+    font-family: fot-tsukuardgothic-std, tbudrgothic-std, sans-serif;
     font-size: 16px;
 }
 
@@ -60,6 +60,10 @@ a {
     overflow: hidden;
 }
 
+.grecaptcha-badge {
+    visibility: hidden;
+}
+
 .header {
     display: flex;
     justify-content: space-between;
@@ -96,13 +100,15 @@ a {
     margin: 0;
 }
 
+@media (width < 768px) {
+    .logo_right {
+        display: none;
+    }
+}
+
 .icon_home {
     width: 20px;
     vertical-align: text-bottom;
-}
-
-.nav {
-    margin-top: 15px;
 }
 
 .nav-toggle-btn_label {
@@ -285,8 +291,8 @@ a {
 /* ハンバーガーアイコンの設置スペース */
 .drawer_open {
     display: flex;
-    height: 60px;
-    width: 60px;
+    height: 50px;
+    width: 50px;
     justify-content: center;
     align-items: center;
     position: relative;
@@ -340,8 +346,8 @@ a {
 /* メニューの文言 */
 .nav-toggle-btn_label {
     position: absolute;
-    right: 5.5%;
-    top: 2%;
+    right: 4.8%;
+    top: -7%;
     transform: translate(-25%, 0);
     bottom: 3px;
     font-size: 10px;
@@ -372,18 +378,44 @@ a {
 }
 
 .nav-logo {
-    width: 60px;
+    width: 100px;
     height: auto;
 }
 
 .nav-text {
-    margin-bottom: 35px;
+    margin-bottom: 20px;
     font-weight: bolder;
+}
+
+@media (width < 769px) {
+    .nav-text {
+        margin-bottom: 10px;
+        margin-top: -10px;
+    }
+
+    .nav-logo {
+        width: 80px;
+    }
 }
 
 .menu_flex {
     display: flex;
     justify-content: center;
+}
+
+.nav_content .nav_list {
+    column-count: 2;
+    column-gap: 32px;
+    padding: 0;
+    margin: 0 0 20px;
+}
+
+.nav_content .nav_list li {
+    break-inside: avoid;
+}
+
+.nav_content .nav_list .sub-menu {
+    column-count: 1;
 }
 
 .nav_list {
@@ -392,7 +424,7 @@ a {
     margin-left: 15px;
 }
 
-.nav_item {
+header .menu-item-type-post_type {
     border-top: #462401 1px solid;
     width: 150px;
     margin: 8px auto;
@@ -400,13 +432,38 @@ a {
     text-align: center;
 }
 
-.nav_item:last-child {
+header .menu-item-type-post_type:last-child {
     border-bottom: 1px solid #462401;
     padding-bottom: 15px;
 }
 
 .line {
     padding-right: 10px;
+}
+
+.x_wrapper {
+    display: inline-block;
+}
+
+.to_contact {
+    margin: 10px auto 20px 20px;
+    display: inline-block;
+    width: 200px;
+    padding: 5px 30px;
+    border-radius: 10px;
+    border: #462401 solid 2px;
+    background-color: #E4CAC5;
+}
+
+
+
+.l_main .header-search-form {
+    width: 70%;
+}
+
+.header-search-form {
+    width: 66%;
+    margin: 0 auto;
 }
 
 /* メニュー黒ポチを消す */
@@ -426,6 +483,12 @@ a {
 /*===================================
 パンくずリスト
 ===================================*/
+.breadcrumb_wrapper {
+    width: 90%;
+    max-width: 900px;
+    margin: 50px auto 0;
+}
+
 .breadcrumb {
     display: flex;
     flex-wrap: wrap;
@@ -445,7 +508,8 @@ a {
 .nav-links {
     padding: 1em;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 20px;
     margin-bottom: 30px;
 }
 
@@ -485,6 +549,7 @@ a {
 .px16 {
     font-size: 16px;
 }
+
 
 @media screen and (max-width:768px) {
     .nav-links {
@@ -592,8 +657,12 @@ li {
     text-align: center;
 }
 
+.future figure {
+    padding: 2em 0 1em;
+}
+
 .sub-title {
-    margin: 0;
+    margin: 0 0 20px;
 }
 
 .future-title {
@@ -610,29 +679,60 @@ li {
 }
 
 /* 
-更新のお知らせ
+更新情報
 */
-.information_box {
+.info_flex {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 30px;
+    max-width: 85%;
+    margin: 0 auto;
+
+    @media (width < 768px) {
+        flex-direction: column;
+    }
+}
+
+.information_box,
+.top_information_box {
     padding: 20px;
-    max-width: 520px;
+    max-width: 90%;
     width: 90%;
     height: auto;
     margin: 0 auto 90px;
     text-align: left;
-    border: #E1B2A9 solid 3px;
-    border-radius: 25px;
+
+
+    @media (width < 769px) {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    &:last-of-type {
+        margin-bottom: 40px;
+    }
 }
 
 .information-title {
     text-align: center;
     font-size: 1.5rem;
-    margin: 0 0 15px;
+    margin: 0 0 25px;
     color: #9e7975;
+
+    @media (width < 769px) {
+        font-size: 1.2rem;
+    }
 }
 
+
 .information_table {
-    width: 100%;
+    width: 90%;
+    max-width: 450px;
+    margin: 0 auto 30px;
     table-layout: fixed;
+
 
     tr {
         margin: 0;
@@ -643,6 +743,16 @@ li {
             line-height: 1.4;
 
             a {
+                display: block;
+
+                @media (width < 769px) {
+                    font-size: 0.75rem;
+                }
+            }
+
+            @media (width < 769px) {
+                line-height: 1;
+                margin-bottom: 0;
                 display: block;
             }
         }
@@ -655,27 +765,24 @@ li {
                 /* 長い文字もちゃんと折り返す */
                 white-space: normal;
                 overflow-wrap: anywhere;
+
+                @media (width < 769px) {
+                    font-size: 1rem;
+                }
+            }
+
+            @media (width < 769px) {
+                line-height: 1;
+                margin-bottom: 0.5rem;
+                display: block;
             }
         }
     }
 }
 
-@media (width < 768px) {
-    .information_table {
-        tr {
-            display: flex;
-            flex-direction: column;
-        }
-
-        td,
-        th {
-            display: block;
-        }
-
-        td {
-            margin-bottom: 15px;
-        }
-    }
+.top_information_box {
+    border: #9a5952 1px solid;
+    border-radius: 20px;
 }
 
 .informatiln_link {
@@ -689,22 +796,21 @@ li {
     background-color: #9e7975;
 }
 
-@media (width <=768px) {
-    .information_box {
-        width: 90%;
-    }
-}
-
 /* SLEとはのキャッチコピー */
 .subtitle_wrapper {
     width: 80%;
     max-width: 600px;
     margin: 0 auto;
+
 }
 
 .subtitle_title {
     font-size: 1.5rem;
     margin-top: 0;
+
+    @media (width < 769px) {
+        font-size: 1.25rem;
+    }
 }
 
 .subtitle_sle_text {
@@ -712,6 +818,10 @@ li {
     width: 90%;
     margin: 0 auto 20px;
     text-align: left;
+
+    @media (width < 769px) {
+        font-size: 1rem;
+    }
 }
 
 .to_aboutsle_link {
@@ -723,19 +833,30 @@ li {
     border: #000 solid 2px;
     border-radius: 20px;
 
+    @media (width < 769px) {
+        font-size: 0.9rem;
+    }
 }
 
 /* 
-伝えたいこと
+わたしから伝えたいこと
 */
 .message_title {
     font-size: 1.5rem;
     margin-bottom: 1rem;
+
+    @media (width < 769px) {
+        font-size: 1.25rem;
+    }
 }
 
 .message_by_me {
     font-size: 1.1rem;
     margin-bottom: 15px;
+
+    @media (width < 769px) {
+        font-size: 1rem;
+    }
 }
 
 .to_kankai_box {
@@ -1304,31 +1425,94 @@ textarea {
 
 */
 
-/*
-フッター
-*/
-.footer {
-    background-color: #E1B2A9;
-}
+/* =========================
+   フッターメニュー（親と子を分ける）
+========================= */
 
-.footer_upside_flex,
-.footer_downside_flex {
-    padding: 1.5% 15%;
+/* 2列の箱（あなたはすでに .footer-nav__row を使ってるのでそれを活かす） */
+.footer .footer-nav__row {
     display: flex;
-    justify-content: space-evenly;
-    align-items: start;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 50px;
+    padding: 1.5% 15%;
 }
 
-.footer_upside_left,
-.footer_upside_right,
-.footer_downside_left,
-.footer_downside_right {
-    max-width: 450px;
-    width: 100%;
-    padding-left: 10%;
+/* ul（メニュー本体） */
+.footer .footer-menu {
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
-.link_title {
+/* 親（見出し）だけを大きく太く */
+.footer .footer-menu>li {
+    margin: 50px 0 15px;
+}
+
+.footer .footer-menu>li>a {
+    display: inline-block;
+    font-weight: 700;
+    font-size: 18px;
+    text-decoration: none;
+}
+
+/* 子メニュー（▶付き）は小さく・間隔狭く */
+.footer .footer-menu .sub-menu {
+    list-style: none;
+    margin: 12px 0 0;
+    padding: 0;
+}
+
+.footer .footer-menu .sub-menu li {
+    margin: 10px 0;
+}
+
+.footer .footer-menu .sub-menu a {
+    display: block;
+    font-weight: 400;
+    /* ← 子は太字にしない */
+    font-size: 16px;
+    /* ← 子は少し小さく */
+    padding-left: 16px;
+    /* ← ▶分の余白 */
+    position: relative;
+}
+
+/* ▶ を表示 */
+.footer .footer-menu .sub-menu a::before {
+    content: "▶";
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+/* 仕切り線（あなたの .link_line をそのまま） */
+.footer .link_line {
+    max-width: 80%;
+    margin: 0 auto;
+    border: none;
+    border-top: 1px solid rgba(0, 0, 0, .35);
+}
+
+/* スマホは左右の余白を減らす */
+@media (max-width: 789px) {
+    .footer .footer-nav__row {
+        padding: 1% 4%;
+        gap: 24px;
+    }
+
+    .footer .footer-menu>li>a {
+        font-size: 15px;
+    }
+
+    .footer .footer-menu .sub-menu a {
+        font-size: 14px;
+    }
+}
+
+
+.menu-item-type-post_type {
     display: block;
     font-size: 18px;
     margin: 50px 0 15px;
@@ -1369,6 +1553,7 @@ textarea {
     text-align: center;
 }
 
+
 @media only screen and (max-width: 794px) {
     .sp-only {
         display: block;
@@ -1379,7 +1564,8 @@ textarea {
     }
 
     .header {
-        height: 70px;
+        height: 65px;
+        padding: 0;
     }
 
     .logo {
@@ -1404,7 +1590,7 @@ textarea {
     }
 
     .title-text {
-        font-size: 12.5px;
+        font-size: 15.5px;
         letter-spacing: 0px;
         margin-bottom: 40px;
     }
@@ -1422,17 +1608,19 @@ textarea {
 
     .future {
         text-align: center;
+        margin-bottom: 30px;
     }
 
     .future-title {
         padding-top: 20px;
+        font-size: 29px;
     }
 
     .future-text {
         width: 315px;
         font-size: 15px;
         letter-spacing: normal;
-        line-height: 2.3rem;
+        line-height: 1.8;
     }
 
     .tell {
@@ -1493,11 +1681,10 @@ textarea {
     } */
 
     .link_title {
-        margin-top: 30px;
+        margin-top: 20px;
     }
 
-    .footer_upside_flex,
-    .footer_downside_flex {
+    .footer-nav__row {
         padding: 1% 0;
     }
 
@@ -1507,6 +1694,20 @@ textarea {
 
     .link_item a {
         font-size: 14px;
+    }
+}
+
+@media (width < 1070px) {
+    .header .pc-only {
+        display: none;
+    }
+
+    .header .sp-only {
+        display: block;
+    }
+
+    .header .nav {
+        display: block;
     }
 }
 
@@ -1681,7 +1882,7 @@ textarea {
 /*==================================================
 アコーディオンのためのcss
 ===================================*/
-label {
+.menu label {
     background: #E2B2A9;
     color: #462401;
     padding: 10px;
@@ -1779,7 +1980,8 @@ input[type="checkbox"].on-off:checked+ul {
 
 .faq,
 .freind-outer,
-section.future section.text {
+section.future,
+section.text {
     height: auto;
     margin: 45px 0;
 }
@@ -1813,6 +2015,15 @@ section.future section.text {
     max-width: 600px;
     width: 100%;
     margin: 80px auto 80px auto;
+    padding: 20px;
+    background: #fff;
+    text-align: center;
+}
+
+.chart-box04 {
+    max-width: 600px;
+    width: 100%;
+    margin: 0 auto;
     padding: 20px;
     background: #fff;
     text-align: center;
@@ -1909,15 +2120,16 @@ aboutMedicineのCSS
     margin: 0 auto;
     padding: 0;
 
-    .overview {
-        text-align: left;
-        max-width: 500px;
-        width: 90%;
-        margin: 0 auto 20px;
+}
 
-        h3 {
-            text-align: center;
-        }
+.overview {
+    text-align: left;
+    max-width: 500px;
+    width: 90%;
+    margin: 0 auto 20px;
+
+    h3 {
+        text-align: center;
     }
 }
 
@@ -1935,6 +2147,12 @@ aboutMedicineのCSS
     margin-top: 20px;
     border-radius: 15px;
 }
+@media (max-width: 796px) {
+  .am_title {
+    width: 90%;
+    margin: 20px auto 40px;
+  }
+}
 
 
 
@@ -1947,7 +2165,7 @@ aboutMedicineのCSS
     font-size: 23px;
     display: inline-block;
     margin-right: 0;
-    margin-left: auto;
+    margin-left: 5%;
 }
 
 .yokuseizai_text {
@@ -1977,6 +2195,7 @@ aboutMedicineのCSS
 .medicine {
     display: flex;
     flex-direction: column;
+    height: 100%;
     margin-bottom: 25px;
 }
 
@@ -2035,7 +2254,13 @@ aboutMedicineのCSS
 .kaihen {
     text-align: right;
 }
-
+@media (max-width: 906px) {
+    .am_grid {
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 40px 15px;
+        padding: 0 4% 5%;
+    }
+}
 @media (max-width: 794px) {
     .am_grid {
         grid-template-columns: 1fr 1fr;
@@ -2046,12 +2271,27 @@ aboutMedicineのCSS
     .medicine {
         width: 100%;
         margin: 0 auto;
+        display: grid;
+        grid-template-rows: auto 1fr 2fr;
+    }
+
+    .medicine a {
+      display: grid;
+      grid-template-rows: subgrid;
+      grid-row: span 3;
     }
 
     .medicine_img {
-        height: auto;
+        height: 150px;
     }
 
+    .medicine_center {
+      height: initial;
+    }
+
+    .medicine_text_box {
+      height: initial;
+    }
     .chat {
         width: 300px;
     }
@@ -2139,9 +2379,18 @@ skinのCSS
     padding: 65px 0;
 }
 
-.flex {
+.flex,
+.header_flex {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+@media (width < 500px) {
+    .header_flex {
+        gap: 20px;
+    }
 }
 
 .kihonjouhou_left {
@@ -2272,6 +2521,15 @@ skinのCSS
     text-decoration: underline;
 }
 
+/* 皮膚外用薬 */
+#hositu.BGwhite,
+#fukusayo.BGwhite {
+    text-align: left;
+    max-width: 940px;
+    width: 90%;
+    margin: 0 auto;
+}
+
 #SLE_tiryou,
 #tyuui {
     max-width: 100%;
@@ -2288,7 +2546,6 @@ skinのCSS
     max-width: 900px;
     width: 90%;
     margin: 0 auto;
-    height: 40px;
 }
 
 #SLE_tiryou ul {
@@ -2385,6 +2642,8 @@ skinのCSS
         width: 30%;
     }
 }
+
+
 
 @media (max-width: 794px) {
 
@@ -3031,7 +3290,7 @@ skinのCSS
 
 .abc {
     font-size: clamp(2.5rem, 1.955rem + 2.73vw, 4rem);
-    font-family: "Montserrat", sans-serif;
+    font-family: montserrat, sans-serif;
     display: inline-block;
     margin: 0;
 }
@@ -3264,24 +3523,20 @@ skinのCSS
 }
 
 .enquete_result_wrapper {
-    border: 3px solid #9E7975;
-    border-radius: 25px;
-    padding: 20px 50px;
-    margin-bottom: 40px;
-}
-
-@media (width < 768px) {
-    .enquete_result_wrapper {
-        padding: 10px 5px;
-    }
+    width: 900px;
+    max-width: 90%;
+    margin: 0 auto;
+    text-align: left;
 }
 
 .enquete_title {
     font-size: 1.25rem;
+    text-align: center;
 }
 
 .enquete_subtitle {
     font-size: 1.175rem;
+    text-align: center;
 }
 
 /* 
@@ -3351,4 +3606,404 @@ skinのCSS
             font-size: 16px;
         }
     }
+}
+
+.information_more {
+    margin-top: 8px;
+    display: flex;
+    justify-content: flex-end;
+
+    /* 右寄せ */
+    @media (width < 769px) {
+        margin-top: 0;
+    }
+}
+
+.information_more-link {
+    font-size: 14px;
+    text-decoration: none;
+    color: #b27b72;
+    letter-spacing: 0.05em;
+}
+
+.information_more-arrow {
+    display: inline-block;
+    margin-left: 4px;
+    font-size: 12px;
+    transform: translateY(-1px);
+}
+
+.information_more-link:hover {
+    text-decoration: underline;
+    opacity: 0.8;
+}
+
+.site-main {
+    margin-top: 100px;
+}
+
+.header-search-form {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.header-search-field {
+    padding: 4px 8px;
+    font-size: 14px;
+    border: 2px solid #462401;
+    border-radius: 999px;
+    min-width: 60%;
+    background-color: #fff;
+    height: 35px;
+}
+
+.header .header-search-field {
+    padding: 4px 8px;
+    font-size: 14px;
+    border: 2px solid #462401;
+    border-radius: 999px;
+    min-width: 160px;
+    background-color: #E4CAC5;
+    height: 35px;
+}
+
+.l-main .header-search-field {
+    min-width: none;
+    width: 300px;
+}
+
+.header-search-submit {
+    height: 35px;
+    width: 55px;
+    padding: 4px 10px;
+    font-size: 13px;
+    border: none;
+    border-radius: 999px;
+    background: #b27b72;
+    /* サイトのポイントカラーに合わせてOK */
+    color: #fff;
+    cursor: pointer;
+}
+
+.header-search-submit:hover {
+    opacity: 0.85;
+}
+
+/* わたしからのお知らせ blog */
+.blog-archive {
+    margin-top: 80px;
+}
+
+/* 検索結果のページ search.php */
+/* 検索結果ページ全体 */
+main.search {
+    max-width: 960px;
+    width: 80%;
+    margin: 70px auto 70px;
+}
+
+.search .search-page {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 32px 16px;
+}
+
+.search .search-header {
+    margin-bottom: 20px;
+}
+
+.search .search-heading {
+    margin: 0 0 6px;
+    font-size: 22px;
+    line-height: 1.4;
+}
+
+.search .search-count {
+    margin: 0;
+    font-size: 13px;
+    opacity: .7;
+}
+
+/* リスト */
+.search .search-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: grid;
+    gap: 14px;
+}
+
+.search .search-item {
+    border: 1px solid rgba(0, 0, 0, .12);
+    border-radius: 14px;
+    overflow: hidden;
+    background: #fff;
+}
+
+.search .search-link {
+    display: block;
+    padding: 16px;
+    text-decoration: none;
+    color: inherit;
+}
+
+.search .search-link:hover {
+    background: rgba(0, 0, 0, .03);
+}
+
+.search .search-title {
+    margin: 0 0 8px;
+    font-size: 18px;
+    line-height: 1.45;
+}
+
+.search .search-excerpt {
+    margin: 0 0 10px;
+    line-height: 1.8;
+    opacity: .85;
+}
+
+.search .search-date {
+    font-size: 12px;
+    opacity: .65;
+}
+
+/* ページネーション */
+.search .search-pagination {
+    margin-top: 22px;
+}
+
+.search .search-pagination .page-numbers {
+    display: inline-block;
+    padding: 8px 12px;
+    margin: 0 3px;
+    border: 1px solid rgba(0, 0, 0, .15);
+    border-radius: 10px;
+    text-decoration: none;
+    color: inherit;
+}
+
+.search .search-pagination .page-numbers.current {
+    background: rgba(0, 0, 0, .08);
+    border-color: rgba(0, 0, 0, .25);
+}
+
+/* 診断のまとめページ */
+#sindan_index .sindan_index {
+    max-width: 940px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+#sindan_index li.sindan_item {
+    text-align: left;
+    margin-bottom: 20px;
+
+}
+
+/* sleと付き合うもくじ */
+.withsle_list {
+    text-align: left;
+}
+
+/* コンタクトフォーム */
+/* フォーム全体の余白 */
+.page-id-26 main {
+    width: 90%;
+    max-width: 800px;
+    margin: 70px auto 0;
+}
+
+.page-id-26 header+h1 {
+    text-align: center;
+    margin-top: 70px;
+}
+
+.page-id-26 h1+p {
+    text-align: center;
+}
+
+.wpcf7 {
+    font-size: 1.175rem;
+}
+
+.wpcf7 form label {
+    color: #462401;
+    padding: 30px;
+    margin: 20px auto;
+    border: none;
+}
+
+.wpcf7-form p {
+    height: 40px;
+}
+
+/* 入力 */
+.wpcf7 .form-input {
+    font-size: 1rem;
+    width: 400px;
+    padding: 10px;
+    height: 30px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+
+    @media (width < 513px) {
+        width: 100%;
+    }
+}
+
+/* テキストエリア */
+.wpcf7 .form-textarea {
+    font-size: 1rem;
+    width: 100%;
+    min-height: 160px;
+    padding: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    resize: vertical;
+
+    @media (width < 513px) {
+        height: 230px;
+    }
+}
+
+.wpcf7-form p:nth-child(5) {
+    height: 265px;
+
+    @media (width < 513px) {
+        height: 300px;
+    }
+}
+
+/* 送信ボタン */
+.wpcf7-form p:nth-child(6) {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.wpcf7 .form-submit {
+    font-size: 1rem;
+    padding: 12px 18px;
+    border: 0;
+    background-color: #e0bdb7;
+    border-radius: 999px;
+    cursor: pointer;
+}
+
+.hensin_info {
+    margin-bottom: 60px;
+}
+
+/* ブログ アーカイブページ */
+.blog-archive {
+    width: 90%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.blog-archive__title {
+    text-align: center;
+}
+
+article.post-card {
+    border: #462401 solid 1px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    padding: 0 20px 15px;
+    text-align: left;
+}
+
+.blog-archive a {
+    display: block;
+}
+
+h2.post-card__title {
+    margin-bottom: -3px;
+}
+
+time.post-card__date {
+    margin-bottom: 5px;
+    font-size: 0.75rem;
+}
+
+p.post-card__excerpt {
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+article.post-card:last-child {
+    margin-bottom: 40px;
+}
+
+/* アンケートアーカイブ */
+.enquete_list {
+    max-width: 300px;
+    width: 90%;
+    margin: 0 auto;
+    text-align: left;
+}
+
+/* 404ページ */
+.notfound {
+    max-width: 720px;
+    margin: 30px auto 20px;
+    padding: 64px 16px;
+}
+
+.notfound__title {
+    font-size: 28px;
+    margin: 0 0 12px;
+
+    @media (width < 769px) {
+        font-size: 1.25rem;
+        line-height: 1.8;
+    }
+}
+
+.notfound__text {
+    line-height: 1.8;
+    margin: 0 0 24px;
+}
+
+.notfound__btn {
+    display: inline-block;
+    padding: 12px 16px;
+    border: 1px solid #111;
+    text-decoration: none;
+}
+
+.notfound__search {
+    margin-top: 24px;
+}
+
+.l-main .header-search-form {
+    display: block;
+    gap: 15px;
+}
+
+.l-main .header-search-form {
+    width: 100%;
+}
+
+.l-main .header-search-submit {
+    margin-top: 15px;
+}
+
+/* ポストのスタイル */
+.single-post main {
+  width: 85%;
+  max-width: 1000px;
+  margin: 20px auto;
+}
+.single-post .container {
+  margin-top: 65px;
+}
+.single-post h1 {
+  font-size: 1.5em;
+  line-height: 1.25;
 }
