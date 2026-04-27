@@ -2195,7 +2195,6 @@ aboutMedicineのCSS
 .medicine {
     display: flex;
     flex-direction: column;
-    height: 100%;
     margin-bottom: 25px;
 }
 
@@ -2233,7 +2232,7 @@ aboutMedicineのCSS
 
 .medicine_text_box {
     padding: 10px;
-    height: 210px;
+    flex: 1;
     display: flex;
     flex-direction: column;
     border: 3px solid #E2B2A9;
