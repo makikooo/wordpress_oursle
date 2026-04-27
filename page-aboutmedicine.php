@@ -12,6 +12,8 @@
         </figure>							
     </section>
 
+
+    
     <!-- パンくずリスト　スタート -->
     <section class="breadcrumb_wrapper">
 
