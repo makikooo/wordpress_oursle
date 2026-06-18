@@ -1,4 +1,5 @@
 <?php get_header(); ?>
+<?php global $wp_query; ?>
 
 <main class="search">
     <header class="search-header">
@@ -19,11 +20,13 @@
                 <?php
                 $excerpt = get_the_excerpt();
                 if ( ! $excerpt ) {
-                    $excerpt = wp_trim_words( wp_strip_all_tags( get_the_content() ), 40, '…' );
-                } else {
-                    $excerpt = wp_trim_words( $excerpt, 40, '…' );
+                    $excerpt = wp_strip_all_tags( get_the_content() );
                 }
-                echo esc_html( $excerpt );
+                // 本文がDBに無い（テンプレート直書き）ページはテンプレートから抜粋
+                if ( ! trim( $excerpt ) && function_exists( 'oursle_get_template_text' ) ) {
+                    $excerpt = oursle_get_template_text( get_post_field( 'post_name', get_the_ID() ) );
+                }
+                echo esc_html( wp_trim_words( $excerpt, 40, '…' ) );
                 ?>
                 </p>
 

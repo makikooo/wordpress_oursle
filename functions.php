@@ -180,38 +180,116 @@ function my_breadcrumb() {
     echo '</nav>';
 }
 
-// 検索結果に「投稿＋固定ページ＋news」を含める（ただし特定スラッグは除外）
+// 検索結果に「投稿＋固定ページ＋news」を含める
 function my_search_post_types($q) {
     if (is_admin() || ! $q->is_main_query()) return;
 
     if ($q->is_search()) {
         $q->set('post_type', array('post', 'page', 'news'));
-
-        // 除外したいスラッグ
-        $slugs = array(
-            'azanin','actemra','benlysta','cellcept','certican','endoxan','graceptor','imuran',
-            'methotrexate','neoral','prograph','rituximab','safneroo'
-        );
-
-        $exclude_ids = array();
-
-        foreach ($slugs as $slug) {
-            $ids = get_posts(array(
-                'post_type'      => array('post', 'page', 'news'), // 探す対象
-                'name'           => $slug,                         // スラッグ一致
-                'post_status'    => 'publish',
-                'fields'         => 'ids',
-                'posts_per_page' => -1,
-                'no_found_rows'  => true,
-            ));
-            if (!empty($ids)) {
-                $exclude_ids = array_merge($exclude_ids, $ids);
-            }
-        }
-
-        // 除外を反映
-        $current = (array) $q->get('post__not_in');
-        $q->set('post__not_in', array_values(array_unique(array_merge($current, $exclude_ids))));
     }
 }
 add_action('pre_get_posts', 'my_search_post_types');
+
+/**
+ * page-{スラッグ}.php テンプレートから表示テキストだけを抜き出す。
+ * PHPコード・script/style・HTMLタグを取り除いた本文を返す（無ければ空文字）。
+ */
+function oursle_get_template_text($slug) {
+    $file = get_template_directory() . '/page-' . $slug . '.php';
+    if (! file_exists($file)) return '';
+
+    $raw = file_get_contents($file);
+    if ($raw === false) return '';
+
+    // PHPコード（開始タグから終了タグまで）を除去する
+    $text = preg_replace('/<\?(php|=)?.*?\?>/s', ' ', $raw);
+    // script / style ブロックを除去
+    $text = preg_replace('#<script\b[^>]*>.*?</script>#is', ' ', $text);
+    $text = preg_replace('#<style\b[^>]*>.*?</style>#is', ' ', $text);
+    // HTMLタグを除去
+    $text = wp_strip_all_tags($text);
+    // 余分な空白を圧縮
+    $text = preg_replace('/\s+/u', ' ', $text);
+
+    return trim($text);
+}
+
+/**
+ * 検索語にテンプレート本文が一致する固定ページのID配列を返す。
+ * スペース区切りの語はすべて含む（AND）ものを一致とみなす。
+ */
+function oursle_search_template_page_ids($term) {
+    $term = trim((string) $term);
+    if ($term === '') return array();
+
+    // 検索語をトークン分割（全角・半角スペース）
+    $tokens = preg_split('/[\s\x{3000}]+/u', $term, -1, PREG_SPLIT_NO_EMPTY);
+    if (empty($tokens)) return array();
+
+    $files = glob(get_template_directory() . '/page-*.php');
+    if (empty($files)) return array();
+
+    $ids = array();
+    foreach ($files as $file) {
+        $slug = preg_replace('/^page-/', '', basename($file, '.php'));
+        $text = oursle_get_template_text($slug);
+        if ($text === '') continue;
+
+        // すべてのトークンを含む場合のみ一致
+        $matched = true;
+        foreach ($tokens as $token) {
+            if (mb_stripos($text, $token) === false) {
+                $matched = false;
+                break;
+            }
+        }
+        if (! $matched) continue;
+
+        $page = get_posts(array(
+            'post_type'      => 'page',
+            'name'           => $slug,
+            'post_status'    => 'publish',
+            'posts_per_page' => 1,
+            'fields'         => 'ids',
+            'no_found_rows'  => true,
+        ));
+        if (! empty($page)) {
+            $ids[] = (int) $page[0];
+        }
+    }
+
+    return $ids;
+}
+
+/**
+ * 通常の検索条件（タイトル・本文）に加えて、
+ * テンプレート本文が一致した固定ページもヒットさせる。
+ */
+function oursle_search_include_template_pages($search, $wp_query) {
+    if (is_admin() || ! $wp_query->is_main_query() || ! $wp_query->is_search()) {
+        return $search;
+    }
+
+    $ids = oursle_search_template_page_ids($wp_query->get('s'));
+    if (empty($ids)) return $search;
+
+    global $wpdb;
+    $idlist = implode(',', array_map('intval', $ids));
+
+    // 通常検索条件が空（検索語なし等）なら、テンプレ一致だけを条件にする
+    if (trim($search) === '') {
+        return " AND ({$wpdb->posts}.ID IN ($idlist)) ";
+    }
+
+    // $search は先頭が " AND (...)"。ORでテンプレ一致を追加する。
+    $search = preg_replace(
+        '/^\s*AND\s*\(/',
+        " AND ( {$wpdb->posts}.ID IN ($idlist) OR (",
+        $search,
+        1
+    );
+    $search .= ')';
+
+    return $search;
+}
+add_filter('posts_search', 'oursle_search_include_template_pages', 10, 2);
