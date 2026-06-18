@@ -77,59 +77,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="top_information_box">
-                    <h4 class="information-title">更新情報</h4>
-                    <table class="information_table">
-                        <?php
-                            // お知らせを取得（お知らせがカスタム投稿の想定）
-                            $args = array(
-                                'post_type'      => 'news',   // ← お知らせのスラッグ。違うならここを変更
-                                'posts_per_page' => 3,        // 表示件数
-                                'orderby'        => 'date',
-                                'order'          => 'DESC',
-                            );
-                            $post_query = new WP_Query($args);
-                            
-                            if ($post_query->have_posts()) :
-                                while ($post_query->have_posts()) : $post_query->the_post();
-                        
-                            // ▼リンク先URL
-                            // Page Links To を使っている場合 → get_permalink() が自動で書き換わるのでそのままでOK
-                            $link_url = get_permalink();
-                            
-                            // プラグインなしで、カスタムフィールドにURLを入れている場合はこんな感じ：
-                            // $custom_link = get_post_meta(get_the_ID(), 'news_link_url', true);
-                            // $link_url    = !empty($custom_link) ? esc_url($custom_link) : get_permalink();
-                        ?>
-                            <tr>
-                                <th class="info_date">
-                                    <a class="informatiln_link" href="<?php echo esc_url($link_url); ?>">
-                                        <?php echo esc_html(get_the_date('Y.m.d')); ?>
-                                    </a>
-                                </th>
-                                <td class="info_message">
-                                    <a class="informatiln_link" href="<?php echo esc_url($link_url); ?>">
-                                        <?php the_title(); ?>
-                                    </a>
-                                </td>
-                            </tr>
-                            <?php
-                        endwhile;
-                        wp_reset_postdata();
-                        else :
-                            ?>
-                        <tr>
-                            <td colspan="2">現在、更新のお知らせはありません。</td>
-                        </tr>
-                        <?php endif; ?>
-                    </table>
-                    <div class="information_more">
-                        <?php $news_archive_url = get_post_type_archive_link( 'news' ); ?>
-                        <a class="information_more-link" href="<?php echo esc_url( $news_archive_url ); ?>">
-                            もっと見る<span class="information_more-arrow">＞</span>
-                        </a>
-                    </div>
-                </div>
+                
             </div>
         </section>
         <section class="green future aboutsle">

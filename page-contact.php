@@ -122,9 +122,10 @@
             <?php if( $mode == 'input') { ?>
                 <!-- 入力画面  POSTではない（GETということ）　-->
             <section class="sec02_cannot">
-                <p class="contact_text">ご依頼・ご相談や、ホームページのご感想など<br>
+              <p>現在は使えません</p>
+                <!-- <p class="contact_text">ご依頼・ご相談や、ホームページのご感想など<br>
                     お気軽にお問い合わせくださいませ。<br>
-                    <span class="red">※</span>は必須項目です。</p>
+                    <span class="red">※</span>は必須項目です。</p> -->
             </section>
             <section class="sec03_contact">
                 <?php

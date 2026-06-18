@@ -54,7 +54,7 @@
                     従来の治療法と併用されることがあります。適切な医療専門家の監視の下で使用する必要があります
                 </p>
             </div>
-            <img class="medicine_img_right" src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/images/seruseputo.webp" alt="アクテムラの写真">
+            <!-- <img class="medicine_img_right" src="<?php echo esc_url( get_template_directory_uri()); ?>/assets/images/seruseputo.webp" alt="アクテムラの写真"> -->
         </div>
         <div class="index_box">
             <p class="index">もくじ</p>
