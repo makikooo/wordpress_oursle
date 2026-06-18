@@ -108,15 +108,30 @@
                                 <a href="<?php echo esc_url( home_url() ); ?>"><img class="nav-logo" src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/logo.png" alt=""></a>
                                 <p class="nav-text">笑って生きていくために一緒に考えよう</p>
                                 <div class="menu_flex">
-                                    <?php
-                                    wp_nav_menu([
-                                        'theme_location' => 'header_menu',
-                                        'container'      => false,
-                                        'menu_class'     => 'nav_list', 
-                                        'depth'          => 2,
-                                        'fallback_cb'    => false,
-                                    ]);
-                                    ?>
+                                    <ul class="nav_list">
+                                        <li class="nav_item">
+                                            <ul class="sub-menu nav_submenu">
+                                                <li class="menu-item-type-post_type nav_item"><a class="nav_link" href="<?php echo esc_url( home_url('/aboutsle/') ); ?>">SLEとは</a></li>
+                                                <li class="menu-item-type-post_type nav_item"><a class="nav_link" href="<?php echo esc_url( home_url('/symptoms/') ); ?>">症状</a></li>
+                                                <li class="menu-item-type-post_type nav_item"><a class="nav_link" href="<?php echo esc_url( home_url('/sindan_info/') ); ?>">診断</a></li>
+                                                <li class="menu-item-type-post_type nav_item"><a class="nav_link" href="<?php echo esc_url( home_url('/sindan_info/kensa/') ); ?>">検査結果の見方</a></li>
+                                                <li class="menu-item-type-post_type nav_item"><a class="nav_link" href="<?php echo esc_url( home_url('/treatment_index/') ); ?>">SLEの治療</a></li>
+                                                <li class="menu-item-type-post_type nav_item"><a class="nav_link" href="<?php echo esc_url( home_url('/treatment_index/aboutmedicine/') ); ?>">薬の一覧</a></li>
+                                                <li class="menu-item-type-post_type nav_item"><a class="nav_link" href="<?php echo esc_url( home_url('/gappeisyo/') ); ?>">SLEの合併症</a></li>
+                                            </ul>
+                                        </li>
+                                        <li class="nav_item">
+                                            <ul class="sub-menu nav_submenu">
+                                                <li class="menu-item-type-post_type nav_item"><a class="nav_link" href="<?php echo esc_url( home_url('/pregnancy/') ); ?>">SLEと妊娠・出産</a></li>
+                                                <li class="menu-item-type-post_type nav_item"><a class="nav_link" href="<?php echo esc_url( home_url('/withsle_index/') ); ?>">SLEと付き合う</a></li>
+                                                <li class="menu-item-type-post_type nav_item"><a class="nav_link" href="<?php echo esc_url( home_url('/withsle_index/qa/') ); ?>">よくある質問</a></li>
+                                                <li class="menu-item-type-post_type nav_item"><a class="nav_link" href="<?php echo esc_url( home_url('/enquete_info/') ); ?>">アンケート一覧</a></li>
+                                                <li class="menu-item-type-post_type nav_item"><a class="nav_link" href="<?php echo esc_url( home_url('/friend/') ); ?>">SLE仲間と繋がる</a></li>
+                                                <li class="menu-item-type-post_type nav_item"><a class="nav_link" href="<?php echo esc_url( home_url('/public_info/tokuteisikkann/') ); ?>">特定疾患受給者票</a></li>
+                                                <li class="menu-item-type-post_type nav_item"><a class="nav_link" href="<?php echo esc_url( home_url('/aboutme/') ); ?>">わたしについて</a></li>
+                                            </ul>
+                                        </li>
+                                    </ul>
                                 </div>
                                 <picture class="x_wrapper">
                                     <a href="https://x.com/SLE_makikoooo?ref_src=twsrc%5Etfw"><img src="<?php echo esc_url( get_template_directory_uri() ); ?>/assets/images/twitter.png" alt="X"></a>
