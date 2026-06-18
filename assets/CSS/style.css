@@ -2269,14 +2269,16 @@ aboutMedicineのCSS
     .medicine {
         width: 100%;
         margin: 0 auto;
-        display: grid;
-        grid-template-rows: auto 1fr 2fr;
+        display: flex;
+        flex-direction: column;
+        height: 100%;
     }
 
     .medicine a {
-      display: grid;
-      grid-template-rows: subgrid;
-      grid-row: span 3;
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      
     }
 
     .medicine_img {
@@ -2288,11 +2290,12 @@ aboutMedicineのCSS
       font-weight: 700;
     }
     .medicine_center {
-      height: initial;
+      height: auto;
     }
 
     .medicine_text_box {
-      height: initial;
+      height: auto;
+      flex: 1;
     }
     .chat {
         width: 300px;
